@@ -10,3 +10,28 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Installation et lancement du site
+
+Pour installer les dépendances et lancer le site, suivez les étapes ci-dessous :
+
+1. **Cloner le dépôt** :
+    ```bash
+    git clone https://github.com/votre-utilisateur/votre-repo.git
+    cd votre-repo
+    ```
+
+2. **Installer les dépendances** :
+    ```bash
+    npm install
+    ```
+
+3. **Lancer le serveur de développement** :
+    ```bash
+    npm run dev
+    ```
+
+4. **Accéder au site** :
+    Ouvrez votre navigateur et allez à l'adresse [http://localhost:3000](http://localhost:3000).
+
+Ces commandes vous permettront de démarrer le projet en mode développement avec Vite et React.
