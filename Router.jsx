@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Home, About, Accommodations, Error} from './src/Js/elements';
-import { Header, Footer} from './src/Js/Layouts';
+import { Home, About, Accommodations, Error} from './src/Js/Pages';
+import { Header, Footer} from './src/Js/Components';
 
 ReactDOM.render(
     <React.StrictMode>
