@@ -1,7 +1,7 @@
 import { Header, Footer } from "../layouts";
 
 
-const MainRoot = () => {
+const Layout = () => {
     return (
         <>
             <Header />
@@ -12,4 +12,4 @@ const MainRoot = () => {
     );
 };
 
-export default MainRoot;
+export default Layout;
