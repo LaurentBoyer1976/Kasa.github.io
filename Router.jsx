@@ -1,18 +1,19 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Home, About, accommodations, Error} from './src/Js/Pages';
-import { Header, Footer, Error404, LayRoot} from './src/Js/Layouts';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home, About, Accommodations, Error} from './src/Js/elements';
+import { Header, Footer} from './src/Js/Layouts';
 
 ReactDOM.render(
     <React.StrictMode>
         <Router>
             <Header />
-                <Route>
-                    <Switch path="/Home" page={Home} />                    
-                    <Switch path="/Accommodations" page={accommodations} />
-                    <Switch path="/About" page={About} />
-                    <Switch path= "*" page={Error} />
-                </Route>
+                <Routes>
+                    <Route path="/Home" element={<Home />} />                    
+                    <Route path="/Accommodations" element={<Accommodations />} />
+                    <Route path="/About" element={<About />} />
+                    <Route path= "*" element={<Error />} />
+                </Routes>
             <Footer />
         </Router>
     </React.StrictMode>,
