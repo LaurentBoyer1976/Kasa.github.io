@@ -1,1 +1,55 @@
-// Contenu par défaut
+@use "../Var_Mixins_.scss" as vm;
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0 10%;
+    .containerLogo{
+        width:100%;
+        height: 100%;
+        &__Kasa{
+            width: 54%;
+            height: 85%;
+            padding: 2%;
+        }
+    }
+    .navList{
+        display: flex;
+        
+        margin: 0; 
+        padding: 0;
+        width: 100%;
+        justify-content: flex-end;
+        column-gap: 15%;
+        .navLink{
+            width: fit-content;
+            height: 100%;
+            list-style: none;
+            &__link{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: fit-content;
+                height: 100%;
+                color: #000000;
+                font-size: 1rem;
+                font-weight: 700;
+                text-decoration: none;
+                font-family: vm.$mainFont;
+                font-size: vm.$FontSize24;
+                font-weight: vm.$FontW500;
+                &:hover{
+                    text-decoration: underline;
+                    text-underline-offset: 0.25rem;
+                }
+            }
+
+        }
+    }
+
+}
+    
+    

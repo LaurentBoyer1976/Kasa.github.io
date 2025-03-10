@@ -1,1 +1,12 @@
 // Contenu par défaut
+@import './Var&Mixins.scss';
+
+#root{
+    display: flex;
+    flex-flow: column;
+    font-family: $mainFont;
+    font-size: $mainFontSize;
+}
+li{
+    list-style: none;
+}
