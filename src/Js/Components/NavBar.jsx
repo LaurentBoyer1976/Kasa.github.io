@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import "./NavBar.css";
+import logo from "../../assets/Kasa_LOGO.svg";
+//import "./NavBar.css";
 
 
 const NavLink = ({ link, text }) => {
@@ -10,10 +11,12 @@ const NavLink = ({ link, text }) => {
     )
 }
 
+
+
 const LogoKasa = () => {
     return (
         <Link className="containerLogo" to="/">
-                <img className="containerLogo__Kasa" src="../../assets/Kasa_LOGO.svg" alt="logo Kasa"></img>
+                <img className="containerLogo__Kasa" src={logo} alt="logo Kasa"></img>
         </Link>
     )
 }
@@ -31,4 +34,4 @@ const NavBar = () => {
     )
 
 };
-export { NavBar, LogoKasa };
+export default NavBar;

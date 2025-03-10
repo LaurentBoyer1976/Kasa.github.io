@@ -1,10 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import '../Css/index.css'
-import App from '../Js/App.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import '../Css/index.css';
+import Router from '../../Router.jsx'; // Chemin mis à jour pour refléter la position à la racine
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.body).render(
   <StrictMode>
-    <App />
+    <Router />
   </StrictMode>,
-)
+);
