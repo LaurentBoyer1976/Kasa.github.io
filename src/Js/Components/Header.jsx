@@ -1,4 +1,5 @@
-//import "./Header.css";
+import React from "react";
+import "../../Css/Components/Header.css"
 import NavBar from "./NavBar";
 
 

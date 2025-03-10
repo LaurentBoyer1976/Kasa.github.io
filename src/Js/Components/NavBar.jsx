@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/Kasa_LOGO.svg";
-//import "./NavBar.css";
+import "../../Css/Components/NavBar.css";
 
 
 const NavLink = ({ link, text }) => {
