@@ -14,8 +14,6 @@ const Home = () => {
             <article className="home__content">
                 <Cards />
             </article>    
-         
-            
         </div>
     );
 };
