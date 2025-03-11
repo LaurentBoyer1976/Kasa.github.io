@@ -27,7 +27,7 @@ const NavBar = () => {
             <LogoKasa />
             <ul className="navList">
                 <NavLink link="/" text="Accueil" />
-                <NavLink link="/about" text="À propos" />
+                <NavLink link="/About" text="À propos" />
             </ul>
 
         </nav>
