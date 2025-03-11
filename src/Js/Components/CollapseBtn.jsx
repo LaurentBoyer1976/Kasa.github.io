@@ -5,7 +5,8 @@ const CollapseBtn = ({ id, title, children }) => {
     const handleToggle = () => {
         setIsOpen(!isOpen);
     };
-
+//todo: ajouter dans le scss l’icône pour le bouton collapse et le style du texte
+//todo (suite) et le style du bouton collapse et vérifier la pertinence de l'opérateur ternaire ligne 19.
     return (
         <div className="collapseBtn__container" key={id}>
                 <h2 className="collapseBtn__container--title">{title}</h2>
