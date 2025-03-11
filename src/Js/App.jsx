@@ -1,11 +1,11 @@
 import React from 'react';
-import '../Css/App.css'; 
+import '../Css/App.css';
+import AppRouter from '../../Router.jsx';
 
 function App() {
   return (
-    <div>
-      {/* Contenu de base ou message de bienvenue */}
-      <h1>Bienvenue sur Kasa</h1>
+    <div id ="root">
+      <AppRouter />
     </div>
   );
 }
