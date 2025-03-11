@@ -3,15 +3,17 @@ import React from 'react';
 import Banner from '../Components/Banner.jsx';
 import BannerTitle from '../Components/BannerTitle.jsx';
 import homeBannerImg from '../../Assets/IMG/BannerPicture.png';
+import Cards from '../Components/Cards.jsx';
 
-const Home = () => {
-    console.log(homeBannerImg);
-    console.log('BannerTitle', BannerTitle);    
+const Home = () => {   
     return (
         <div className="home">
             <Banner assets={homeBannerImg}>
                 <BannerTitle />
-            </Banner>    
+            </Banner>
+            <article className="home__content">
+                <Cards />
+            </article>    
          
             
         </div>
