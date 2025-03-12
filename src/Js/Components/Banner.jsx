@@ -1,20 +1,23 @@
-
+import React from 'react';
 import "../../Css/Components/Banner.css";
 
-
-
-
-const Banner = ({children, assets}) => {
-    return(
+const Banner = ({ children, assets }) => {
+    return (
         <section className="banner">
             <div className="banner__container">
-                <img className="bannerImg" src={assets} alt="banner"></img>
-                <div className="banner__container--text">
-                    {children}
-                </div>    
+                {children ? (
+                    children
+                ) : (
+                    <>
+                        <img className="bannerImg" src={assets} alt="banner" />
+                        <div className="banner__container--text">
+                            {}
+                        </div>
+                    </>
+                )}
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Banner;
