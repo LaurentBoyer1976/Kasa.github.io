@@ -30,7 +30,8 @@ const Host = (name, picture) => {
 }
 
 
-const AccommodationHeader = ({id, host, title, location}) => {
+const AccommodationHeader = ({logement}) => {
+    const {id, title, location, host} = logement;
     //todo : ajouter logique pour récupérer les données du logement en fonction du clic sur le card
     return (
     <header className='accommodation__header' key={id}>
