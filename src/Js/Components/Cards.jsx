@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logements from '../../../Datas/logements.json';
 
 const Card = ({id, title, cover}) => {
-    //todo: ajouter le lien vers la page détails la clé est l'id du logement.
     return (
         <Link to={`/accommodations/${id}`} className="cardLink" key={id}> 
             <figure className="card__container">

@@ -4,6 +4,7 @@ import Layout from './src/Js/Layouts/Layout.jsx';
 import Home from './src/Js/Pages/Home.jsx';
 import About from './src/Js/Pages/About.jsx';
 import Accommodations from './src/Js/Pages/Accommodations.jsx';
+import Error from './src/Js/Pages/Error.jsx';
 
 const AppRouter = () => (
   <Router>
@@ -12,6 +13,8 @@ const AppRouter = () => (
         <Route index element={<Home />} />
         <Route path='/About' element={<About />} />
         <Route path='accommodations/:id' element={<Accommodations />} />
+        <Route path='404' element={<Error />} />
+        <Route path='*' element={<Error />} />
       </Route> 
     </Routes>
   </Router>
