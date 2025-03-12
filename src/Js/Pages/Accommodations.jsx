@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router';
+import { useParams, Navigate } from 'react-router';
 import logements from '../../../Datas/logements.json';
 import Banner from '../Components/Banner.jsx';
 import SlidingPicture from '../Components/SlidingPicture.jsx';
@@ -24,6 +24,10 @@ const AccommodationContent = ({ logement }) => {
 const Accommodations = () => {
     const {id} = useParams();
     const logement = logements.find((logement) => logement.id === id);    
+    
+    if (!logement) {
+        return <Navigate to="/404" />;
+    }
 
     return (
         <article className='accommodations'>
