@@ -5,7 +5,7 @@ import EquipmentsList from './List.jsx';
 import CollapseBtn from './CollapseBtn.jsx';
 
 
-const TagsAndStars = (tags, rating) => {
+const TagsAndStars = ({tags, rating}) => {
     return (
         <section className='tagsAndStars'>
             <Tags tags={tags} />
@@ -27,7 +27,8 @@ const InformationsToggleBtn = ({ description, equipments }) => {
 }
 
 const AccommodationInformations = ({ logement }) => {
-    const { description, equipments, tags, rating } = logement;
+    const { description, equipments, tags=[], rating } = logement;
+    console.log(logement);
 
     return (
         <article className='informations'>

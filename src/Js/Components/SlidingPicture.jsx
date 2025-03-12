@@ -18,9 +18,9 @@ const SlidingPicture = ({ logement }) => {
             <div className='slidingPicture__container'>
                 <span className='slidingPicture__container--previous' onClick={handlePrevious}></span>
                 <img src={gallery[currentIndex]} alt={logement.title} className="slidingPicture__container--img" />            
-                <span className='slidingPicture__container--next' onClick={handleNext}>❯</span>
+                <span className='slidingPicture__container--next' onClick={handleNext}></span>
             </div>
-            { totalPictures <= 1 ? null : <span className='picture__counter'>{currentIndex}/{totalPictures}</span>}            
+            { totalPictures <= 1 ? null : <span className='picture__counter'>{currentIndex+1}/{totalPictures}</span>}            
         </div>
         
     );
