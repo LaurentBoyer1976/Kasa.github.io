@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import EquipmentsList from "./List.jsx";
+import '../../Css/Components/CollapseBtn.css';
 
 const CollapseBtn = ({ id, title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,15 +19,16 @@ const CollapseBtn = ({ id, title, children }) => {
     return (
         <div className="collapseBtn__container" key={id}>
                 <h2 className="collapseBtn__container--title">{title}</h2>
-                <span className="collapseBtn__container--btn-icon"
-                    role="button"
-                    aria-label="collapse button"
-                    onClick={handleToggle}
-                    aria-expanded={isOpen}
-                >
-                    {isOpen ? "-" : "+"}
-                </span>
-                
+                <div className="collapseBtn__container--btn">
+                    <span className="collapseBtn__container--btn-icon"
+                        role="button"
+                        aria-label="collapse button"
+                        onClick={handleToggle}
+                        aria-expanded={isOpen}
+                    >
+                        {isOpen ? "-" : "+"}
+                    </span>
+                </div>                             
                 <div 
                     className="collapseBtn__container--content"
                     aria-hidden={!isOpen}

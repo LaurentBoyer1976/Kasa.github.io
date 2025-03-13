@@ -1,1 +1,26 @@
-// Contenu par défaut
+@use "../Var_Mixins.scss" as vm;
+
+.collapseBtn__container--btn{
+    width: 50%;
+    display: flex;
+    &-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20px;
+        height: 20px;
+        //border: 1px solid black;
+        cursor: pointer;
+        ::after{
+            content:'';
+            color:black;
+            font-family: '';
+            font-size: 1.5rem;
+            display: block;
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s;
+        }
+    }
+    
+}

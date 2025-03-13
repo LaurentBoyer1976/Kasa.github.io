@@ -1,11 +1,13 @@
 // Contenu par défaut
-@import './Var&Mixins.scss';
+@use 'Var_Mixins.scss' as vm;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 
 #root{
     display: flex;
     flex-flow: column;
-    font-family: $mainFont;
-    font-size: $mainFontSize;
+    font-family: vm.$mainFont; 
+    font-size: vm.$mainFontSize;
 }
 li{
     list-style: none;
