@@ -5,15 +5,11 @@ const Banner = ({ children, assets }) => {
     return (
         <section className="banner">
             <div className="banner__container">
-                {children ? (
-                    children
-                ) : (
-                    <>
-                        <img className="bannerImg" src={assets} alt="banner" />
-                        <div className="banner__container--text">
-                            {}
-                        </div>
-                    </>
+            <img className="bannerImg" src={assets} alt="banner" />
+                {children && (                                                                
+                    <div className="banner__container--text">
+                        {children}
+                    </div>                 
                 )}
             </div>
         </section>

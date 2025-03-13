@@ -1,6 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import EquipmentsList from "./List.jsx";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import '../../Css/Components/CollapseBtn.css';
+
+const ToggleChevron = ({ isOpen }) => {
+    return (
+        <FontAwesomeIcon
+            icon={isOpen ? faChevronUp : faChevronDown}
+            className="collapseBtn__container--btn-icon-chevron"
+        />
+    );
+}
 
 const CollapseBtn = ({ id, title, children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,27 +25,25 @@ const CollapseBtn = ({ id, title, children }) => {
             return <p className="contentText">{children}</p>;
         }
     };
-//todo: ajouter dans le scss l’icône pour le bouton collapse et le style du texte
-//todo (suite) et le style du bouton collapse et vérifier la pertinence de l'opérateur ternaire ligne 19.
     return (
         <div className="collapseBtn__container" key={id}>
+            <div className="collapseBtn__container--btn">
                 <h2 className="collapseBtn__container--title">{title}</h2>
-                <div className="collapseBtn__container--btn">
                     <span className="collapseBtn__container--btn-icon"
                         role="button"
                         aria-label="collapse button"
                         onClick={handleToggle}
                         aria-expanded={isOpen}
                     >
-                        {isOpen ? "-" : "+"}
+                        <ToggleChevron isOpen={isOpen} />
                     </span>
-                </div>                             
-                <div 
-                    className="collapseBtn__container--content"
-                    aria-hidden={!isOpen}
-                >
-                   {renderContent()}
-                </div>                                            
+            </div>                             
+            <div 
+                className="collapseBtn__container--content"
+                aria-hidden={!isOpen}
+            >
+               {renderContent()}
+            </div>                                            
         </div>
     );    
 }

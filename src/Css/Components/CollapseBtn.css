@@ -2,6 +2,12 @@
 .collapseBtn__container--btn {
   width: 50%;
   display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  height: 55px;
+  background-color: #FF6060;
+  color: #fff;
 }
 .collapseBtn__container--btn-icon {
   display: flex;
@@ -10,16 +16,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
-}
-.collapseBtn__container--btn-icon ::after {
-  content: "";
-  color: black;
-  font-family: "";
-  font-size: 1.5rem;
-  display: block;
-  width: 20px;
-  height: 20px;
-  transition: all 0.3s;
+  border: none;
 }
 
 /*# sourceMappingURL=CollapseBtn.css.map */

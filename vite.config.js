@@ -6,18 +6,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "src/Sass/Var_Mixins_.scss" as *;`
-      }
-    }
-  },
-  build: {
-    rollupOptions: {
-      input: {
-        main: 'src/Sass/App.scss'
-      },
-      output: {
-        dir: 'src/Css',
-        assetFileNames: '[name].[ext]'
+        additionalData: `@use "src/Sass/Var_Mixins.scss" as *;`
       }
     }
   }
