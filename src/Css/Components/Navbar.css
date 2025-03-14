@@ -8,7 +8,7 @@
 .nav .containerLogo {
   display: flex;
   align-items: center;
-  width: 29%;
+  width: 35%;
   height: 100%;
 }
 .nav .containerLogo__Kasa {
@@ -20,13 +20,11 @@
   display: flex;
   margin: 0;
   padding: 0;
-  width: 100%;
+  width: 30%;
   justify-content: flex-end;
   column-gap: 15%;
 }
 .nav .navList .navLink {
-  width: fit-content;
-  height: 100%;
   list-style: none;
 }
 .nav .navList .navLink__link {
@@ -36,8 +34,6 @@
   width: fit-content;
   height: 100%;
   color: #000000;
-  font-size: 1rem;
-  font-weight: 700;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
@@ -45,7 +41,8 @@
 }
 .nav .navList .navLink__link:hover {
   text-decoration: underline;
-  text-underline-offset: 0.25rem;
+  text-underline-offset: 0.1em;
+  text-decoration-skip-ink: none;
 }
 
 /*# sourceMappingURL=Navbar.css.map */
