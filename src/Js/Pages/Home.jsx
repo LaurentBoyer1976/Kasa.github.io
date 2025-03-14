@@ -8,7 +8,7 @@ import Cards from '../Components/Cards.jsx';
 const Home = () => {   
     return (
         <div className="home">
-            <Banner assets={homeBannerImg}>
+            <Banner type='image' logement={{ cover: homeBannerImg}}>
                 <BannerTitle />
             </Banner>
             <article className="home__content">

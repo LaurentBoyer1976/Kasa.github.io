@@ -1,12 +1,16 @@
 import React from 'react';
 import "../../Css/Components/Banner.css";
+import SlidingPicture from './SlidingPicture';
+import BannerImg from './BannerImg.jsx';
 
-const Banner = ({ children, assets }) => {
+
+const Banner = ({ children,logement, type }) => {
     return (
         <section className="banner">
             <div className="banner__container">
-            <img className="bannerImg" src={assets} alt="banner" />
-                {children && (                                                                
+                {type === "image" && <BannerImg logement={logement} />}
+                {type === "slideshow" && <SlidingPicture logement={logement} />}
+                {type === "image" && children && (                                                                
                     <div className="banner__container--text">
                         {children}
                     </div>                 

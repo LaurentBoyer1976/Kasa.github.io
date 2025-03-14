@@ -14,7 +14,7 @@ const SlidingPicture = ({ logement }) => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + gallery.length) % gallery.length);
     };
     return (
-        <div className='slidingPicture'>
+        <div type='slideshow' className='slidingPicture'>
             <div className='slidingPicture__container'>
                 <span className='slidingPicture__container--previous' onClick={handlePrevious}></span>
                 <img src={gallery[currentIndex]} alt={logement.title} className="slidingPicture__container--img" />            

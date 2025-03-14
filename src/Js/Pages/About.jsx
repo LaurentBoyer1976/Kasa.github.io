@@ -21,7 +21,7 @@ const AboutContent= () => {
 const About = () => {
     return (
         <div className='about'>
-            <Banner assets={aboutBannerImg}/>
+            <Banner type='image' logement={{ cover: aboutBannerImg}}/>
             <article className='about__content'>
                 <AboutContent />
             </article>
