@@ -16,11 +16,11 @@
         }
     }
     .navList{
-        display: flex;        
-        margin: 0; 
-        padding: 0;
-        width: 33%;
-        column-gap: 15%;
+        display: flex;
+        width: 30%;
+        column-gap: 19%;
+        flex-direction: row;
+        justify-content: flex-end;
         .navLink{          
             list-style: none;
             &__link{

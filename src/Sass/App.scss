@@ -1,12 +1,19 @@
 @use 'Var_Mixins.scss' as vm;
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: vm.$mainFont;
     font-size: vm.$mainFontSize;
 }
+/*body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: vm.$mainFont;
+    font-size: vm.$mainFontSize;
+}*/
 #root{
     display: flex;
     flex-flow: column;
