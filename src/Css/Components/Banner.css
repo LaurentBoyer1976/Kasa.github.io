@@ -1,10 +1,51 @@
-.banner__container--text {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.banner {
+  margin: 1% 7% 3% 7%;
+}
+.banner .banner__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px 0px;
+}
+.banner .banner__container--img {
+  box-sizing: border-box;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner .banner__container::before {
+  display: flex;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+.banner .banner__container .banner__container--text {
+  display: flex;
+  position: absolute;
   height: 100px;
 }
-
-.bannerTitle {
-  font-size: 2rem;
-  color: #333;
+.banner .banner__container .banner__container--text-title {
+  display: flex;
+  align-items: center;
+  background-clip: text;
+  background-color: #000;
+}
+.banner .banner__container .banner__container--text-title-h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
 }
 
 /*# sourceMappingURL=Banner.css.map */

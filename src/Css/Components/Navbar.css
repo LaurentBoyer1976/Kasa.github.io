@@ -8,20 +8,17 @@
 .nav .containerLogo {
   display: flex;
   align-items: center;
-  width: 35%;
+  width: 20%;
   height: 100%;
 }
 .nav .containerLogo__Kasa {
-  width: 52%;
   height: 64%;
-  padding: 2%;
 }
 .nav .navList {
   display: flex;
   margin: 0;
   padding: 0;
-  width: 30%;
-  justify-content: flex-end;
+  width: 33%;
   column-gap: 15%;
 }
 .nav .navList .navLink {
