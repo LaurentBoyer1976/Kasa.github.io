@@ -31,7 +31,7 @@ const Accommodations = () => {
 
     return (
         <article className='accommodations'>
-            <Banner>
+            <Banner type='slideshow' logement={logement}>
                 <SlidingPicture logement={logement}/>
             </Banner> 
             <AccommodationContent logement={logement}/>

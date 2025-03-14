@@ -5,6 +5,7 @@ import Home from './src/Js/Pages/Home.jsx';
 import About from './src/Js/Pages/About.jsx';
 import Accommodations from './src/Js/Pages/Accommodations.jsx';
 import Error from './src/Js/Pages/Error.jsx';
+import './src/Css/App.css';
 
 const AppRouter = () => (
   <Router>
