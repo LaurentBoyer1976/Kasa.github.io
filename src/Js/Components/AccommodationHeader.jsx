@@ -11,10 +11,8 @@ const AccommodationHeaderTitle = ({title, location}) => {
 }
 
 const HostProfile =(name) => {
-    const hostName = [];
-    hostName.push(name.name.split(' '));    
-    const surname = hostName[0];
-    const firstname = hostName[1];
+    const hostName = [name.name];
+    const [surname, firstname] = hostName[0].split(' ');
     return(
         <figcaption className='host__description'>
             <p className='host__description--surname'>{surname}</p>
