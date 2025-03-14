@@ -1,11 +1,15 @@
-// Contenu par défaut
-@import './Var&Mixins.scss';
+@use 'Var_Mixins.scss' as vm;
 
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: vm.$mainFont;
+    font-size: vm.$mainFontSize;
+}
 #root{
     display: flex;
     flex-flow: column;
-    font-family: $mainFont;
-    font-size: $mainFontSize;
 }
 li{
     list-style: none;

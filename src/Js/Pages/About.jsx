@@ -2,7 +2,7 @@ import React from 'react';
 import contents from '../../../Datas/about.json';
 import Banner from '../Components/Banner';
 import aboutBannerImg from '../../assets/IMG/BannerPicture2.png';
-import CollapseBtn from '../Components/CollapseBtn';
+import CollapseBtn from '../Components/CollapseBtn.jsx';
 
 const AboutContent= () => {
     return(
@@ -21,7 +21,7 @@ const AboutContent= () => {
 const About = () => {
     return (
         <div className='about'>
-            <Banner assets={aboutBannerImg}/>
+            <Banner type='image' logement={{ cover: aboutBannerImg}}/>
             <article className='about__content'>
                 <AboutContent />
             </article>

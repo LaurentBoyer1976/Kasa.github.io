@@ -28,7 +28,6 @@ const InformationsToggleBtn = ({ description, equipments }) => {
 
 const AccommodationInformations = ({ logement }) => {
     const { description, equipments, tags=[], rating } = logement;
-    console.log(logement);
 
     return (
         <article className='informations'>

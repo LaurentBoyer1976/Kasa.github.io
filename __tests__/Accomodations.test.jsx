@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Accommodations from '../src/Js/Pages/Accommodations.jsx';
 import logements from '../Datas/logements.json';
-//import { describe, it, expect } from 'jest';
+import { describe, it, expect } from 'jest';
 
 describe('Accommodations', () => {
     it('renders accommodation details when ID exists', () => {
