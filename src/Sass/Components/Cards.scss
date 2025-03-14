@@ -1,0 +1,51 @@
+@use "../Var_Mixins.scss" as vm;
+
+.cardLink {  
+    text-decoration: none;
+    position: relative;
+    display: flex;    
+    overflow: hidden;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    &__container{
+        display: flex;
+        align-items: flex-end;        
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &::before{
+            display: flex;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.05),
+                                        rgba(0, 0, 0, 0.1),
+                                        rgba(0, 0, 0, 0.25),
+                                        rgba(0, 0, 0, 0.4));
+            
+            border-radius: 10px;    
+          }
+        &--Img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &--caption{
+            display: flex;
+            width: 52%;
+            margin: auto auto 20px 20px;
+            position: absolute;
+            &-title{                
+                font-weight: vm.$FontW700;
+                font-size: vm.$FontSize18;
+                color: vm.$colorWhite;
+            }
+        }
+    }
+}

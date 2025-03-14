@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logements from '../../../Datas/logements.json';
+import '../../Css/Components/Cards.css';
 
 const Card = ({id, title, cover}) => {
     return (
         <Link to={`/accommodations/${id}`} className="cardLink" key={id}> 
-            <figure className="card__container">
-                <img src={cover} alt={title} className="card__container--Img" />
-                <figcaption className="card__container--caption">
-                    <h2 className="cardTitle">{title}</h2>
+            <figure className="cardLink__container">
+                <img src={cover} alt={title} className="cardLink__container--Img" />
+                <figcaption className="cardLink__container--caption">
+                    <h2 className="cardLink__container--caption-title">{title}</h2>
                 </figcaption>
             </figure>
         </Link>
