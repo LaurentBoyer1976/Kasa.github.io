@@ -9,7 +9,7 @@
     .containerLogo{
         display: flex;
         align-items: center;
-        width:29%;
+        width:35%;
         height: 100%;
         &__Kasa{
             width: 52%;
@@ -18,16 +18,13 @@
         }
     }
     .navList{
-        display: flex;
-        
+        display: flex;        
         margin: 0; 
         padding: 0;
-        width: 100%;
+        width: 30%;
         justify-content: flex-end;
         column-gap: 15%;
-        .navLink{
-            width: fit-content;
-            height: 100%;
+        .navLink{          
             list-style: none;
             &__link{
                 display: flex;
@@ -35,16 +32,16 @@
                 align-items: center;
                 width: fit-content;
                 height: 100%;
-                color: #000000;
-                font-size: 1rem;
-                font-weight: 700;
+                color: #000000;                
                 text-decoration: none;
                 font-family: vm.$mainFont;
                 font-size: vm.$FontSize24;
                 font-weight: vm.$FontW500;
                 &:hover{
                     text-decoration: underline;
-                    text-underline-offset: 0.25rem;
+                    text-underline-offset: 0.1em;
+                    text-decoration-skip-ink: none;
+                    
                 }
             }
 
