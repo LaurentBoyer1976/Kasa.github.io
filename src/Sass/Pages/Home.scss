@@ -1,1 +1,11 @@
-// Contenu par défaut
+@use '../Var_Mixins.scss' as vm;
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.home__content{
+    padding: 0 7%;
+}

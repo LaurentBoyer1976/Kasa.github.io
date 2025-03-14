@@ -1,5 +1,13 @@
 @use "../Var_Mixins.scss" as vm;
 
+.cards__container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    overflow: scroll;
+    max-height: 860px;
+}
+
 .cardLink {  
     text-decoration: none;
     position: relative;
@@ -10,6 +18,8 @@
     border-radius: 10px;
     aspect-ratio: 1/1;
     box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    margin-top :2%;
+    margin-bottom: 2%;
     &__container{
         display: flex;
         align-items: flex-end;        

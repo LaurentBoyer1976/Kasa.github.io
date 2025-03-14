@@ -17,6 +17,7 @@ const Card = ({id, title, cover}) => {
 }
 
 const Cards = () => {
+    console.log(logements.length);
     return(
         <section className="cards__container">
             {logements.map((logement) => (
