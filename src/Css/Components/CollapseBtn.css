@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
 .CollapseListBtn__container {
   display: flex;
   flex-flow: column;
@@ -61,6 +81,12 @@
 }
 .CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=false] {
   display: block;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=false] .contentText {
+  animation: slideDown 0.5s ease-in-out;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=true] .contentText {
+  animation: slideUp 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=CollapseBtn.css.map */

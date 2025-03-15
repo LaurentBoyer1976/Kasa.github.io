@@ -270,3 +270,37 @@ $objectFitContain: contain;
     text-underline-offset: $textUnderlineOffset;
     text-decoration-skip-ink: $textDecorationSkipInk;
 }
+
+
+//NOTE: Animation et Keyframes
+// Info: Animation pour faire coulisser le texte du haut vers le bas
+@keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  // Info: Animation pour faire coulisser le texte du bas vers le haut
+  @keyframes slideUp {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+  }
+  
+  @mixin slideDownAnimation($duration: 0.5s, $timingFunction: ease-in-out) {
+    animation: slideDown $duration $timingFunction;
+  }
+  
+  @mixin slideUpAnimation($duration: 0.5s, $timingFunction: ease-in-out) {
+    animation: slideUp $duration $timingFunction;
+  }
