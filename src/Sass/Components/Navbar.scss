@@ -2,43 +2,22 @@
 
 
 .nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #FFFFFF;
+    @include vm.Nav;
     .containerLogo{
-        display: flex;
-        align-items: center;
-        width:20%;
-        height: 100%;
+        @include vm.containerLogo;
         &__Kasa{            
             height: 64%;            
         }
     }
     .navList{
-        display: flex;
-        width: 30%;
-        column-gap: 19%;
-        flex-direction: row;
-        justify-content: flex-end;
+        @include vm.navList;
         .navLink{          
-            list-style: none;
             &__link{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: fit-content;
-                height: 100%;
-                color: #000000;                
-                text-decoration: none;
-                font-family: vm.$mainFont;
-                font-size: vm.$FontSize24;
-                font-weight: vm.$FontW500;
+                @include vm.nav__Link;
                 &:hover{
                     text-decoration: underline;
                     text-underline-offset: 0.1em;
-                    text-decoration-skip-ink: none;
-                    
+                    text-decoration-skip-ink: none;                    
                 }
             }
 

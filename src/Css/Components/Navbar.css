@@ -21,20 +21,22 @@
   flex-direction: row;
   justify-content: flex-end;
 }
-.nav .navList .navLink {
-  list-style: none;
-}
 .nav .navList .navLink__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: fit-content;
   height: 100%;
-  color: #000000;
+  color: #000;
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
+}
+.nav .navList .navLink__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.1em;
+  text-decoration-skip-ink: none;
 }
 .nav .navList .navLink__link:hover {
   text-decoration: underline;

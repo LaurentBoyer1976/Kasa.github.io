@@ -1,5 +1,6 @@
 import React from 'react';
 import Error404 from '../Components/Error404.jsx';  
+import '../../Css/Pages/Error.css';
 
 const Error = () => {
     return (

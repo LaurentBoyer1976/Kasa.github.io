@@ -1,3 +1,29 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.error__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10vh;
+  padding: 9.5%;
+  height: fit-content;
+}
+.error__container--title {
+  font-weight: 700;
+  font-size: 14.25rem;
+  color: #FF6060;
+}
+.error__container--message {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: #FF6060;
+}
+.error__container--link {
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #000;
+  text-underline-offset: 0.15em;
+  text-decoration-skip-ink: none;
+}
 
 /*# sourceMappingURL=Error404.css.map */
