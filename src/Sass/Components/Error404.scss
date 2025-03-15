@@ -1,1 +1,15 @@
-// Contenu par défaut
+@use './../Var_Mixins.scss' as vm;
+
+.error__container{
+    @include vm.errorContainer;
+    
+    &--title{
+        @include vm.errorTitle;
+    }
+    &--message{
+        @include vm.errorMessage;
+    }
+    &--link{
+        @include vm.errorLink;
+    }
+}

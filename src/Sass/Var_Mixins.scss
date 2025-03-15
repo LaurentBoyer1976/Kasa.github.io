@@ -13,7 +13,10 @@ $FontSize16: 1rem;
 $FontSize18: 1.125rem;
 $FontSize24: 1.5rem;
 $FontSize32: 2rem;
+$FontSize36: 2.25rem;
 $FontSize48: 3rem;
+$FontSize228: 14.25rem;
+$FontW100: 100;
 $fontW400: 400;
 $FontW500: 500;
 $FontW700: 700;
@@ -90,6 +93,43 @@ $objectFitContain: contain;
     display: $display;
     justify-content: $justify;
     align-items: $align;
+}
+//NOTE: Mixins pour le Navbar
+@mixin Nav ($display: $displayFlex, $justify: $flexSpaceBetween, $width: $width100, $backgroundColor: #FFFFFF){
+    display: $display;
+    justify-content: $justify;
+    width: $width;
+    background-color: $backgroundColor;
+}
+@mixin containerLogo ($display: $displayFlex, $align: $alignCenter, $width: 20%, $height: $width100){
+    display: $display;
+    align-items: $align;
+    width: $width;
+    height: $height;
+}
+@mixin navList ($display: $displayFlex, $width: 30%, $columnGap: 19%, $flexDirection: $flexRow, $justify: $flexEnd){
+    display: $display;
+    width: $width;
+    column-gap: $columnGap;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+}
+@mixin nav__Link ($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $width: fit-content, $height: 100%, $color: $colorBlack, $textDecoration: none, $fontFamily: $mainFont, $fontSize: $FontSize24, $fontWeight: $FontW500){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    width: $width;
+    height: $height;
+    color: $color;
+    text-decoration: $textDecoration;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    &:hover{
+        text-decoration: underline;
+        text-underline-offset: 0.1em;
+        text-decoration-skip-ink: none;
+    }
 }
 //Note: Mixins pour la bannière.
 @mixin bannerContainer ($width: $width100, $display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $position: $relative, $borderRadius: $borderRadius25, $boxShadow: $boxShadow){
@@ -201,4 +241,32 @@ $objectFitContain: contain;
     line-height: $lineHeight;
     font-size: $fontSize;
     font-weight: $fontWeight;
+}
+
+//NOTE: Mixins pour la page d'erreur 404
+@mixin errorContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $rowGap: 10vh, $padding: 9.5%, $height: fit-content){
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    row-gap: $rowGap;
+    padding: $padding;
+    height: $height;
+}
+@mixin errorTitle ($fontWeight: $FontW700, $fontSize: $FontSize228, $color: $bckColorToggleBtn){
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
+@mixin errorMessage ($fontWeight: $FontW500, $fontSize: $FontSize36, $color: $bckColorToggleBtn){
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
+@mixin errorLink ($fontWeight: $FontW500, $fontSize: $FontSize18, $color: $colorBlack, $textUnderlineOffset: 0.15em, $textDecorationSkipInk: none){
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+    text-underline-offset: $textUnderlineOffset;
+    text-decoration-skip-ink: $textDecorationSkipInk;
 }
