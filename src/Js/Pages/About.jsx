@@ -3,6 +3,8 @@ import contents from '../../../Datas/about.json';
 import Banner from '../Components/Banner';
 import aboutBannerImg from '../../assets/IMG/BannerPicture2.png';
 import CollapseBtn from '../Components/CollapseBtn.jsx';
+import '../../Css/Pages/About.css';
+
 
 const AboutContent= () => {
     return(

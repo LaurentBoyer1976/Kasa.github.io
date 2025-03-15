@@ -1,21 +1,34 @@
 @use "../Var_Mixins.scss" as vm;
-.collapseBtn__container--btn {
-    width: 50%;
-    display: flex;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px 15px;
-    height: 55px;
-    background-color: vm.$bckColorToggleBtn;
-    color: vm.$colorWhite;
 
-    &-icon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        border: none;
+.CollapseListBtn__container{
+   @include vm.collapseListBtnContainer;
+    .collapseBtn__container{
+        @include vm.collapseBtnContainer;
+        
+        .collapseBtn__container--btn{
+            @include vm.collapseBtnContainerBtn;
+            .collapseBtn__container--title{
+                @include vm.collapseBtnTitle;
+            }
+            .collapseBtn__container--btn-icon{
+                @include vm.collapseBtnIcon;
+                svg{
+                    font-size: 1rem;
+                }
+            }
+        }
+       .collapseBtn__container--btn[aria-expanded="true"] {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .collapseBtn__container--content{
+            @include vm.collapseBtnContent;
+            .contentText{
+             @include vm.collapseBtnContentText;
+            }
+        }
+        .collapseBtn__container--content[aria-hidden="false"]{
+            display: block;
+        }
     }
 }

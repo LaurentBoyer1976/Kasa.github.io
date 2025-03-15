@@ -1,4 +1,18 @@
-// Contenu par défaut
-.Test{
-    font: 100% Arial, sans-serif;
+@use './../Var_Mixins.scss' as vm;
+
+.banner{
+    margin: 1% 7% 3% 7%;
+    .banner__container{
+        @include vm.bannerContainer;
+        height: 223px;
+            &--img{
+              @include vm.bannerImg;              
+            }
+       &::before{
+        @include vm.bannerBefore30;
+      }
+    }
+  }
+.about{
+    height: 100%;
 }

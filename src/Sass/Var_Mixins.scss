@@ -12,6 +12,9 @@ $FontSize14: 0.875rem;
 $FontSize16: 1rem;
 $FontSize18: 1.125rem;
 $FontSize24: 1.5rem;
+$FontSize32: 2rem;
+$FontSize48: 3rem;
+$fontW400: 400;
 $FontW500: 500;
 $FontW700: 700;
 $FontW900: 900;
@@ -21,5 +24,181 @@ $bckColorToggleBtn: #FF6060;
 $colorWhite: #fff;
 $bckColorArticle: #f6f6f6;
 $colorBlack: #000;
+$bckColorBlackRgba60: rgba(0, 0, 0, 0.6);
+$bckColorBlackRgba30: rgba(0, 0, 0, 0.3);
+
+//INFO: Z-index
+$zIndex1: 1;
+$zIndex2: 2;
+$zIndex3: 3;
+
+//Info: position
+$relative: relative;
+$absolute: absolute;  
+
+//Info: border-radius
+$borderRadius0: 0;
+$borderRadius5: 5px;
+$borderRadius10: 10px;
+$borderRadius15: 15px;
+$borderRadius25: 25px;
+
+//Info: Width&Height
+$width100: 100%;
+$height100: 100%;
+
+//Info: Box-shadow
+$boxShadow: rgb(0 0 0 / 25%) 0px 4px 4px 0px;
+
+//Info: Display
+$displayFlex: flex;
+$displayBlock: block;
 
 
+//Info: Flex
+$flexColumn: column;
+$flexRow: row;
+$flexWrap: wrap;
+$flexCenter: center;
+$flexSpaceBetween: space-between;
+$flexSpaceAround: space-around;
+$flexStart: flex-start;
+$flexEnd: flex-end;
+
+//Info: Align-items
+$alignCenter: center;
+$alignStart: flex-start;
+$alignEnd: flex-end;
+
+//Info: Justify-content
+$justifyCenter: center;
+$justifyStart: flex-start;
+$justifyEnd: flex-end;
+
+
+//Info : Box-sizing
+$boxSizingBorderBox: border-box;
+
+//Info: Variables pour les Img
+$objectFitCover: cover;
+$objectFitContain: contain;
+
+
+
+//INFO: Mixins
+@mixin flexCenter($justify: $justifyCenter, $align: $alignCenter, $display: $displayFlex){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+//Note: Mixins pour la bannière.
+@mixin bannerContainer ($width: $width100, $display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $position: $relative, $borderRadius: $borderRadius25, $boxShadow: $boxShadow){
+    width: $width;
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    position: $position;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+}
+@mixin bannerImg ($boxSizing: $boxSizingBorderBox, $borderRadius: $borderRadius25, $width: $width100, $height: $height100, $objectFit: $objectFitCover){
+    box-sizing: $boxSizing;
+    border-radius: $borderRadius;
+    width: $width;
+    height: $height;
+    object-fit: $objectFit;
+}
+@mixin bannerContainerText ($display: $displayFlex, $position: $absolute, $height: 100px){
+    display: $display;
+    position: $position;
+    height: $height;
+}
+@mixin bannerContainerTextTitle ($display: $displayFlex, $align: $alignCenter, $backgroundClip: text, $backgroundColor: $colorBlack){
+    display: $display;
+    align-items: $align;
+    background-clip: $backgroundClip;
+    background-color: $backgroundColor;
+}
+@mixin bannerContainerTextTitleH1 ($margin: 0, $fontSize: $FontSize48, $fontWeight: $FontW700, $color: $colorWhite, $textShadow: $boxShadow){
+    margin: $margin;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $color;
+    text-shadow: $textShadow;
+}
+@mixin bannerBefore60 ($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba60, $border-radius: $borderRadius25){  
+    display: $display;
+    content: $content;
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    background-color: $backgroundColor;
+    border-radius: $border-radius;
+}
+@mixin bannerBefore30 ($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba30, $border-radius: $borderRadius25){
+    display: $display;
+    content: $content;
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    background-color: $backgroundColor;
+    border-radius: $border-radius;
+}
+//Note: Mixins pour le CollapseBtn
+@mixin collapseListBtnContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $margin: 1% 7% 3% 7%, $rowGap: 30px){
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    margin: $margin;
+    row-gap: $rowGap;
+}
+@mixin collapseBtnContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $flexSpaceBetween, $align: $alignCenter, $width:$width100){
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    width: $width;
+}
+@mixin collapseBtnContainerBtn ($display: $displayFlex, $justify: $flexSpaceBetween, $align: $alignCenter, $width:82%, $height: 52px, $backgroundColor: $bckColorToggleBtn, $color: $colorWhite, $borderRadius: $borderRadius5){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    width: $width;
+    height: $height;
+    background-color: $backgroundColor;
+    color: $color;
+    border-radius: $borderRadius;
+}
+@mixin collapseBtnTitle ($fontSize: $FontSize24, $fontWeight: $FontW700, $padding: 10px 15px 8px 15px){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    padding: $padding;
+}
+@mixin collapseBtnIcon ($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $padding: 0px 15px 0px 0px, $width: 5%, $height: 40px, $cursor: pointer, $border: none){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    padding: $padding;
+    width: $width;
+    height: $height;
+    cursor: $cursor;
+    border: $border;
+}
+@mixin collapseBtnContent ($display: none, $width: 82%, $height: 100%, $backgroundColor: $bckColorArticle, $borderRadius: 5px, $padding: 30px 25px){
+    display: $display;
+    width: $width;
+    height: $height;
+    background-color: $backgroundColor;
+    border-radius: $borderRadius;
+    padding: $padding;
+}
+@mixin collapseBtnContentText ($lineHeight: 2, $fontSize: $FontSize18, $fontWeight: $fontW400){
+    line-height: $lineHeight;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
