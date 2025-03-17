@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-}
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -94,20 +73,4 @@
   object-fit: cover;
 }
 
-.accommodations {
-  margin: 1% 7% 3% 7%;
-}
-.accommodations .banner {
-  margin: 0;
-}
-.accommodations .banner .banner__container {
-  display: block;
-  height: 415px;
-  box-shadow: none;
-  border-radius: unset;
-}
-.accommodations .banner .banner__container::before {
-  display: none;
-}
-
-/*# sourceMappingURL=Accommodations.css.map */
+/*# sourceMappingURL=AccommodationHeader_Infos.css.map */

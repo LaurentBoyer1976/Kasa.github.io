@@ -304,7 +304,7 @@ $cursorPointer: pointer;
     text-decoration-skip-ink: $textDecorationSkipInk;
 }
 
-// NOTE: Mixins pour accommodations (slidingPicture, tags, ratingStars)
+// NOTE: Mixins pour accommodations (slidingPicture, tags, ratingStars, headerInfos)
 @mixin slidingPicture($height: 415px, $overflow: hidden, $position: $relative, $borderRadius: $borderRadius25) {
     height: $height;
     overflow: $overflow;
@@ -363,6 +363,50 @@ $cursorPointer: pointer;
 @mixin slidingIconSvg($fontSize: 5rem, $color: $colorWhite) {
     font-size: $fontSize;
     color: $color;
+}
+
+@mixin accommodationHeader($display: $displayFlex, $justify: $flexSpaceBetween, $align: $alignCenter,) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin rentContainer($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $height: 170px, $rowGap: 5%) {
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    height: $height;
+    row-gap: $rowGap;
+}
+@mixin surnameFirstname($color: $bckColorToggleBtn, $fontWeight: $FontW500, $fontSize: $FontSize18) {
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+}   
+@mixin host($display: $displayFlex, $align: $alignCenter, $height: 170px) {
+    display: $display;
+    align-items: $align;
+    height: $height;
+}
+@mixin hostDescription($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $fontWeight: $FontW500, $rowGap: 5%, $height: $height100,$width: $width100) {
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    font-weight: $fontWeight;
+    row-gap: $rowGap;
+    width: $width;
+    height: $height;
+}
+@mixin hostPicture($width: 100%, $height: 100%, $display: $displayFlex, $align: $alignCenter) {
+    width: $width;
+    height: $height;
+    display: $display;
+    align-items: $align;
+}
+@mixin hostPictureImg($clipPath: circle(50% at 50% 50%), $width: $width100, $objectFit: $objectFitCover) {
+    clip-path: $clipPath;
+    width: $width;
+    object-fit: $objectFit;
 }
 
 // NOTE: Animation et Keyframes
