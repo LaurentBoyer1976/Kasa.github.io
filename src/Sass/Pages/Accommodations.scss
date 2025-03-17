@@ -1,0 +1,17 @@
+@use './../Var_Mixins.scss';
+
+.accommodations{
+    margin: 1% 7% 3% 7%;
+    .banner{
+        margin: 0;
+        .banner__container{
+            display: block;
+            height: 415px;
+            box-shadow: none;
+            border-radius:unset;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
