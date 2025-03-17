@@ -377,6 +377,11 @@ $cursorPointer: pointer;
     height: $height;
     row-gap: $rowGap;
 }
+@mixin rentName($fontWeight: $FontW500, $fontSize: $FontSize36, $color: $bckColorToggleBtn) {
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
 @mixin surnameFirstname($color: $bckColorToggleBtn, $fontWeight: $FontW500, $fontSize: $FontSize18) {
     color: $color;
     font-weight: $fontWeight;

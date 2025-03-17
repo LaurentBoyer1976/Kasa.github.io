@@ -5,9 +5,7 @@
     .rent__container{
         @include vm.rentContainer;
         &--name{
-            font-weight: vm.$FontW500;
-            font-size: vm.$FontSize36;
-            color: vm.$bckColorToggleBtn;
+           @include vm.rentName;
         }
         &--location{
             @include vm.surnameFirstname(vm.$colorBlack);
