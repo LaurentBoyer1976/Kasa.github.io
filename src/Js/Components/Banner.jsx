@@ -1,6 +1,5 @@
 import React from 'react';
-import "../../Css/Components/Banner.css";
-import SlidingPicture from './SlidingPicture';
+import SlidingPicture from './SlidingPicture.jsx';
 import BannerImg from './BannerImg.jsx';
 
 
