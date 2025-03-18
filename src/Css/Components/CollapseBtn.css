@@ -79,14 +79,5 @@
   font-size: 1.125rem;
   font-weight: 400;
 }
-.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=false] {
-  display: block;
-}
-.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=false] .contentText {
-  animation: slideDown 0.5s ease-in-out;
-}
-.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content[aria-hidden=true] .contentText {
-  animation: slideUp 0.5s ease-in-out;
-}
 
 /*# sourceMappingURL=CollapseBtn.css.map */

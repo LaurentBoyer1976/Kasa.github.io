@@ -28,16 +28,6 @@
              @include vm.collapseBtnContentText;
             }
         }
-        .collapseBtn__container--content[aria-hidden="false"]{
-            display: block;
-            .contentText {
-                @include vm.slideDownAnimation; // Appliquer l'animation d'ouverture
-              }
-        }
-        .collapseBtn__container--content[aria-hidden="true"] {
-            .contentText {
-              @include vm.slideUpAnimation; // Appliquer l'animation de fermeture
-            }
-          }
+        
     }
 }

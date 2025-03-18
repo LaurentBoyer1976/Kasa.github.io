@@ -45,7 +45,10 @@ const CollapseBtn = ({ id, title, children }) => {
                 className="collapseBtn__container--content"
                 aria-hidden={!isOpen}
             >   
-                <div className="toDownToUp">
+                <div 
+                    className="toDownToUp"
+                    aria-hidden={!isOpen}
+                >                        
                     {renderContent()}
                 </div>
                
