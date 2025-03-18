@@ -1,13 +1,9 @@
 @use './../Var_Mixins.scss'as vm;
 
 .rating{
-    display: flex;
-    justify-content: center;
+    @include vm.rating;
     &__container{
-        display: flex;
-        justify-content: flex-end;
-        column-gap: 10%;
-        width: 100%;
+        @include vm.ratingContainer;
         &--Stars{
             display: flex;
             justify-content: center;

@@ -1,31 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-}
 .rating {
   display: flex;
   justify-content: center;
 }
 .rating__container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   column-gap: 10%;
   width: 100%;
 }

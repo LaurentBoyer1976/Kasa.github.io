@@ -420,36 +420,18 @@ $cursorPointer: pointer;
     width: $width;
     object-fit: $objectFit;
 }
-
-// NOTE: Animation et Keyframes
-// Info: Animation pour faire coulisser le texte du haut vers le bas
-@keyframes slideDown {
-    from {
-        opacity: $opacity0;
-        transform: $transformTranslateY-50;
-    }
-    to {
-        opacity: $opacity1;
-        transform: $transformTranslateY0;
-    }
+@mixin rating($display: $displayFlex, $justify: $justifyCenter) {
+    display: $display;
+    justify-content: $justify;
 }
-
-// Info: Animation pour faire coulisser le texte du bas vers le haut
-@keyframes slideUp {
-    from {
-        opacity: $opacity1;
-        transform: $transformTranslateY0;
-    }
-    to {
-        opacity: $opacity0;
-        transform: $transformTranslateY-50;
-    }
+@mixin ratingContainer($display: $displayFlex, $justify: $justifyCenter, $columnGap: 10%, $width: $width100) {
+    display: $display;
+    justify-content: $justify;
+    column-gap: $columnGap;
+    width: $width;
 }
-
-@mixin slideDownAnimation($duration: 0.5s, $timingFunction: $easeInOut) {
-    animation: slideDown $duration $timingFunction;
-}
-
-@mixin slideUpAnimation($duration: 0.5s, $timingFunction: $easeInOut) {
-    animation: slideUp $duration $timingFunction;
+@mixin Stars($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
 }
