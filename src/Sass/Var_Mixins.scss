@@ -28,6 +28,9 @@ $bckColorArticle: #f6f6f6;
 $colorBlack: #000;
 $bckColorBlackRgba60: rgba(0, 0, 0, 0.6);
 $bckColorBlackRgba30: rgba(0, 0, 0, 0.3);
+$greyStars: #E3E3E3;
+$pinkStars: #FF6060;
+
 
 // INFO: Z-index
 $zIndex1: 1;
@@ -387,10 +390,9 @@ $cursorPointer: pointer;
     font-weight: $fontWeight;
     font-size: $fontSize;
 }   
-@mixin host($display: $displayFlex, $align: $alignCenter, $height: 170px) {
+@mixin host($display: $displayFlex, $align: $alignCenter) {
     display: $display;
     align-items: $align;
-    height: $height;
 }
 @mixin hostDescription($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $fontWeight: $FontW500, $rowGap: 5%, $height: $height100,$width: $width100) {
     display: $display;

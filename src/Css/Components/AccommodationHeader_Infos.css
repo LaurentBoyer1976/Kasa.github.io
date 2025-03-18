@@ -44,7 +44,6 @@
 .accommodation__header .host {
   display: flex;
   align-items: center;
-  height: 170px;
 }
 .accommodation__header .host__description {
   display: flex;

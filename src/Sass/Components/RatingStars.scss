@@ -1,1 +1,28 @@
-// Contenu par défaut
+@use './../Var_Mixins.scss'as vm;
+
+.rating{
+    display: flex;
+    justify-content: center;
+    &__container{
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10%;
+        width: 100%;
+        &--Stars{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            svg{
+                width: 24px;
+                height: 24px;
+            }
+            &-Pink{
+                color: vm.$pinkStars;
+            }
+            &-Grey{
+                color: vm.$greyStars;
+            }        
+        }
+    }
+}

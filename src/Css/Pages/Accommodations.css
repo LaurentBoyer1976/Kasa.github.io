@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes slideUp {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-50%);
-  }
-}
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -65,7 +44,6 @@
 .accommodation__header .host {
   display: flex;
   align-items: center;
-  height: 170px;
 }
 .accommodation__header .host__description {
   display: flex;
@@ -94,6 +72,49 @@
   object-fit: cover;
 }
 
+.tags__container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  height: 100%;
+  column-gap: 3%;
+}
+.tags__container .tags__container--tag {
+  background-color: #FF6060;
+  padding: 0.5% 4%;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+}
+.rating__container {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10%;
+  width: 100%;
+}
+.rating__container--Stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating__container--Stars svg {
+  width: 24px;
+  height: 24px;
+}
+.rating__container--Stars-Pink {
+  color: #FF6060;
+}
+.rating__container--Stars-Grey {
+  color: #E3E3E3;
+}
+
 .accommodations {
   margin: 1% 7% 3% 7%;
 }
@@ -108,6 +129,93 @@
 }
 .accommodations .banner .banner__container::before {
   display: none;
+}
+.accommodations .informations .tagsAndStars {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.accommodations .informations .informationsToggleBtn {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15%;
+  margin-top: 2%;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 1;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  background-color: #FF6060;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px 10px 10px;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--btn--title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 15px 8px 15px;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px 0px 0px;
+  width: 5%;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container-icon svg {
+  font-size: 1rem;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--content {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+  padding: 30px 25px;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--content .contentText {
+  line-height: 2;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--content .equipments__list {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.accommodations .informations .informationsToggleBtn .collapseBtn__container--content .equipments__list--item {
+  padding: 1% 0;
+  line-height: 1.25;
+  font-size: 1.125rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.accommodations .informations .collapseBtn__container--btn[aria-expanded=true] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.accommodations .informations .collapseBtn__container--content[aria-hidden=false] {
+  display: block;
+}
+.accommodations .informations .collapseBtn__container--content[aria-hidden=false] .contentText, .accommodations .informations .collapseBtn__container--content[aria-hidden=false] .equipments__list {
+  animation: slideDown 0.5s ease-in-out;
+}
+.accommodations .informations .collapseBtn__container--content[aria-hidden=true] .contentText, .accommodations .informations .collapseBtn__container--content[aria-hidden=true] .equipments__list {
+  animation: slideUp 0.5s ease-in-out;
 }
 
 /*# sourceMappingURL=Accommodations.css.map */

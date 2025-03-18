@@ -1,5 +1,8 @@
-@use './../Var_Mixins.scss';
-@import './../Components/AccommodationHeader_Infos.scss';
+@use './../Var_Mixins.scss'as vm;
+@use './../Components/AccommodationHeader_Infos.scss';
+@use './../Components/Tags.scss';
+@use './../Components/RatingStars.scss';
+
 
 .accommodations{
     margin: 1% 7% 3% 7%;
@@ -14,5 +17,68 @@
                 display: none;
             }
         }
+    }
+    .informations{       
+        .tagsAndStars{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+        }
+        .informationsToggleBtn{                        
+                display: flex;                
+                justify-content: space-between;
+                column-gap: 15%;
+                margin-top: 2%;
+            
+            .collapseBtn__container{
+                @include vm.collapseBtnContainer;
+                flex-shrink: 1;
+                &--btn{
+                    @include vm.collapseBtnContainerBtn($borderRadius: vm.$borderRadius10, $width: vm.$width100);
+                    padding: 10px 20px 10px 10px;
+                    &--title{
+                        @include vm.collapseBtnTitle;
+                    }
+                }
+                &-icon{
+                    @include vm.collapseBtnIcon;
+                    svg{
+                        font-size: 1rem;
+                    }
+                }
+                &--content{
+                    @include vm.collapseBtnContent($borderRadius: vm.$borderRadius10, $width: vm.$width100);
+                    .contentText{
+                        @include vm.collapseBtnContentText;
+                    }
+                    .equipments__list{
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: space-between;                            
+                        &--item{                            
+                            padding: 1% 0;                                                    
+                            @include vm.collapseBtnContentText($lineHeight: 1.25);
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+        .collapseBtn__container--btn[aria-expanded="true"] {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .collapseBtn__container--content[aria-hidden="false"]{
+            display: block;
+            .contentText, .equipments__list {
+                @include vm.slideDownAnimation; // Appliquer l'animation d'ouverture
+              }
+        }
+        .collapseBtn__container--content[aria-hidden="true"] {
+            .contentText, .equipments__list {
+              @include vm.slideUpAnimation; // Appliquer l'animation de fermeture
+            }
+          }
     }
 }
