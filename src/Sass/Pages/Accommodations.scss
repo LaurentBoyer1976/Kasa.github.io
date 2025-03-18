@@ -32,7 +32,7 @@
                 margin-top: 2%;
             
             .collapseBtn__container{
-                @include vm.collapseBtnContainer;
+                @include vm.collapseBtnContainer($justify: unset);
                 flex-shrink: 1;
                 &--btn{
                     @include vm.collapseBtnContainerBtn($borderRadius: vm.$borderRadius10, $width: vm.$width100);
@@ -46,39 +46,32 @@
                     svg{
                         font-size: 1rem;
                     }
-                }
-                &--content{
-                    @include vm.collapseBtnContent($borderRadius: vm.$borderRadius10, $width: vm.$width100);
-                    .contentText{
-                        @include vm.collapseBtnContentText;
-                    }
-                    .equipments__list{
-                        display: flex;
-                        flex-flow: column wrap;
-                        justify-content: space-between;                            
-                        &--item{                            
-                            padding: 1% 0;                                                    
-                            @include vm.collapseBtnContentText($lineHeight: 1.25);
-                            white-space: nowrap;
-                        }
-                    }
-                }
+                }                
             }
-        }
+        }        
         .collapseBtn__container--btn[aria-expanded="true"] {
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
         }
-        .collapseBtn__container--content[aria-hidden="false"]{
-            display: block;
-            .contentText, .equipments__list {
-                @include vm.slideDownAnimation; // Appliquer l'animation d'ouverture
-              }
-        }
-        .collapseBtn__container--content[aria-hidden="true"] {
-            .contentText, .equipments__list {
-              @include vm.slideUpAnimation; // Appliquer l'animation de fermeture
+        .collapseBtn__container--content{
+            @include vm.collapseBtnContent($width: vm.$width100, $height: auto);
+            .toDownToUp{
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.15s ease-in-out,                                  
             }
-          }
+            .toDownToUp[aria-hidden="false"]{              
+                max-height: 300px;                
+            }
+            .toDownToUp[aria-hidden="true"]{               
+                max-height: 0;                
+            }
+            .contentText{
+                @include vm.collapseBtnContentText;
+            }
+            .equipments__list{
+                @include vm.collapseBtnContentText;
+            }
+        }
     }
 }

@@ -261,19 +261,24 @@ $cursorPointer: pointer;
     border: $border;
 }
 
-@mixin collapseBtnContent($display: none, $width: 82%, $height: $height100, $backgroundColor: $bckColorArticle, $borderRadius: $borderRadius5, $padding: 30px 25px) {
+@mixin collapseBtnContent($display: $displayFlex, $width: 82%, $height: $height100, $backgroundColor: $bckColorArticle, $borderRadius: $borderRadius5) {
     display: $display;
     width: $width;
     height: $height;
     background-color: $backgroundColor;
     border-radius: $borderRadius;
-    padding: $padding;
 }
 
-@mixin collapseBtnContentText($lineHeight: 2, $fontSize: $FontSize18, $fontWeight: $FontW400) {
+@mixin collapseBtnContentText($lineHeight: 2, $fontSize: $FontSize18, $fontWeight: $FontW400, $padding: 30px 25px) {
     line-height: $lineHeight;
     font-size: $fontSize;
     font-weight: $fontWeight;
+    padding: $padding;
+}
+@mixin toDownToUp($overflow: hidden, $maxHeight: 0, $transition: max-height 0.15s ease-in-out) {
+    overflow: $overflow;
+    max-height: $maxHeight;
+    transition: $transition;
 }
 
 // NOTE: Mixins pour la page d'erreur 404

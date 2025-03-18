@@ -11,23 +11,31 @@
                 @include vm.collapseBtnTitle;
             }
             .collapseBtn__container--btn-icon{
-                @include vm.collapseBtnIcon;
-                
+                @include vm.collapseBtnIcon;                
                 svg{
                     font-size: 1rem;
                 }
             }
         }
+
        .collapseBtn__container--btn[aria-expanded="true"] {
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
         }
         .collapseBtn__container--content{
             @include vm.collapseBtnContent;
+            .toDownToUp{
+                @include vm.toDownToUp;                                       
+            }
+            .toDownToUp[aria-hidden="false"]{              
+                max-height: 200px;
+            }
+            .toDownToUp[aria-hidden="true"]{               
+                max-height: 0;
+            }
             .contentText{
              @include vm.collapseBtnContentText;
             }
-        }
-        
+        }        
     }
 }
