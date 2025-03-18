@@ -1,0 +1,29 @@
+@use './../Var_Mixins.scss' as vm;
+
+.accommodation__header{
+   @include vm.accommodationHeader;
+    .rent__container{
+        @include vm.rentContainer;
+        &--name{
+           @include vm.rentName;
+        }
+        &--location{
+            @include vm.surnameFirstname(vm.$colorBlack);
+        }
+    }
+    .host{
+        @include vm.host;
+        &__description{
+            @include vm.hostDescription;
+                &--surname, &--firstname{           
+                    @include vm.surnameFirstname;
+                }
+        }
+        &__picture{
+            @include vm.hostPicture;
+            &--img{
+                    @include vm.hostPictureImg;
+            }                     
+        }
+    }
+}

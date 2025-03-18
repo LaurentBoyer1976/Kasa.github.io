@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-//Note : Variables pour le Scss
+// Note : Variables pour le Scss
 
-
-//INFO: Fonts
+// INFO: Fonts
 $mainFont: 'Montserrat', sans-serif;
 $faFont: 'Font Awesome 5 Free';
 $mainFontSize: 16px;
@@ -17,48 +16,50 @@ $FontSize36: 2.25rem;
 $FontSize48: 3rem;
 $FontSize228: 14.25rem;
 $FontW100: 100;
-$fontW400: 400;
+$FontW400: 400;
 $FontW500: 500;
 $FontW700: 700;
 $FontW900: 900;
 
-//INFO: color
+// INFO: color
 $bckColorToggleBtn: #FF6060;
 $colorWhite: #fff;
 $bckColorArticle: #f6f6f6;
 $colorBlack: #000;
 $bckColorBlackRgba60: rgba(0, 0, 0, 0.6);
 $bckColorBlackRgba30: rgba(0, 0, 0, 0.3);
+$greyStars: #E3E3E3;
+$pinkStars: #FF6060;
 
-//INFO: Z-index
+
+// INFO: Z-index
 $zIndex1: 1;
 $zIndex2: 2;
 $zIndex3: 3;
 
-//Info: position
+// Info: position
 $relative: relative;
 $absolute: absolute;  
 
-//Info: border-radius
+// Info: border-radius
 $borderRadius0: 0;
 $borderRadius5: 5px;
 $borderRadius10: 10px;
 $borderRadius15: 15px;
 $borderRadius25: 25px;
 
-//Info: Width&Height
+// Info: Width & Height
 $width100: 100%;
 $height100: 100%;
 
-//Info: Box-shadow
+// Info: Box-shadow
 $boxShadow: rgb(0 0 0 / 25%) 0px 4px 4px 0px;
 
-//Info: Display
+// Info: Display
 $displayFlex: flex;
 $displayBlock: block;
 
-
-//Info: Flex
+// Info: Flex
 $flexColumn: column;
 $flexRow: row;
 $flexWrap: wrap;
@@ -68,53 +69,71 @@ $flexSpaceAround: space-around;
 $flexStart: flex-start;
 $flexEnd: flex-end;
 
-//Info: Align-items
+// Info: Align-items
 $alignCenter: center;
 $alignStart: flex-start;
 $alignEnd: flex-end;
 
-//Info: Justify-content
+// Info: Justify-content
 $justifyCenter: center;
 $justifyStart: flex-start;
 $justifyEnd: flex-end;
 
-
-//Info : Box-sizing
+// Info : Box-sizing
 $boxSizingBorderBox: border-box;
 
-//Info: Variables pour les Img
+// Info: Variables pour les Img
 $objectFitCover: cover;
 $objectFitContain: contain;
 
+// Info: Variables pour les animations
+$easeInOut: ease-in-out;
+$duration05s: 1.5s;
+$opacity0: 0;
+$opacity1: 1;
+$transitionOpacity: opacity 1.5s ease-in-out;
+$transformTranslateY-50: translateY(-50%);
+$transformTranslateY0: translateY(0);
+$transformTranslateY20: translateY(20px);
+$transformTranslateY50: translateY(50%);
+$transformTranslateX50: translateX(50%);
+$transformTranslateX-50: translateX(-50%);
+$transformTranslateX0: translateX(0);
 
+// Info: Variables pour le curseur
+$cursorPointer: pointer;
 
-//INFO: Mixins
-@mixin flexCenter($justify: $justifyCenter, $align: $alignCenter, $display: $displayFlex){
+// INFO: Mixins
+@mixin flexCenter($justify: $justifyCenter, $align: $alignCenter, $display: $displayFlex) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
 }
-//NOTE: Mixins pour le Navbar
-@mixin Nav ($display: $displayFlex, $justify: $flexSpaceBetween, $width: $width100, $backgroundColor: #FFFFFF){
+
+// NOTE: Mixins pour le Navbar
+@mixin Nav($display: $displayFlex, $justify: $flexSpaceBetween, $width: $width100, $backgroundColor: $colorWhite) {
     display: $display;
     justify-content: $justify;
     width: $width;
     background-color: $backgroundColor;
 }
-@mixin containerLogo ($display: $displayFlex, $align: $alignCenter, $width: 20%, $height: $width100){
+
+@mixin containerLogo($display: $displayFlex, $align: $alignCenter, $width: 20%, $height: $height100) {
     display: $display;
     align-items: $align;
     width: $width;
     height: $height;
 }
-@mixin navList ($display: $displayFlex, $width: 30%, $columnGap: 19%, $flexDirection: $flexRow, $justify: $flexEnd){
+
+@mixin navList($display: $displayFlex, $width: 30%, $columnGap: 19%, $flexDirection: $flexRow, $justify: $flexEnd) {
     display: $display;
     width: $width;
     column-gap: $columnGap;
     flex-direction: $flexDirection;
     justify-content: $justify;
 }
-@mixin nav__Link ($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $width: fit-content, $height: 100%, $color: $colorBlack, $textDecoration: none, $fontFamily: $mainFont, $fontSize: $FontSize24, $fontWeight: $FontW500){
+
+@mixin nav__Link($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $width: fit-content, $height: $height100, $color: $colorBlack, $textDecoration: none, $fontFamily: $mainFont, $fontSize: $FontSize24, $fontWeight: $FontW500) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
@@ -125,14 +144,15 @@ $objectFitContain: contain;
     font-family: $fontFamily;
     font-size: $fontSize;
     font-weight: $fontWeight;
-    &:hover{
+    &:hover {
         text-decoration: underline;
         text-underline-offset: 0.1em;
         text-decoration-skip-ink: none;
     }
 }
-//Note: Mixins pour la bannière.
-@mixin bannerContainer ($width: $width100, $display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $position: $relative, $borderRadius: $borderRadius25, $boxShadow: $boxShadow){
+
+// NOTE: Mixins pour la bannière
+@mixin bannerContainer($width: $width100, $display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $position: $relative, $borderRadius: $borderRadius25, $boxShadow: $boxShadow) {
     width: $width;
     display: $display;
     justify-content: $justify;
@@ -141,32 +161,37 @@ $objectFitContain: contain;
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
 }
-@mixin bannerImg ($boxSizing: $boxSizingBorderBox, $borderRadius: $borderRadius25, $width: $width100, $height: $height100, $objectFit: $objectFitCover){
+
+@mixin bannerImg($boxSizing: $boxSizingBorderBox, $borderRadius: $borderRadius25, $width: $width100, $height: $height100, $objectFit: $objectFitCover) {
     box-sizing: $boxSizing;
     border-radius: $borderRadius;
     width: $width;
     height: $height;
     object-fit: $objectFit;
 }
-@mixin bannerContainerText ($display: $displayFlex, $position: $absolute, $height: 100px){
+
+@mixin bannerContainerText($display: $displayFlex, $position: $absolute, $height: 100px) {
     display: $display;
     position: $position;
     height: $height;
 }
-@mixin bannerContainerTextTitle ($display: $displayFlex, $align: $alignCenter, $backgroundClip: text, $backgroundColor: $colorBlack){
+
+@mixin bannerContainerTextTitle($display: $displayFlex, $align: $alignCenter, $backgroundClip: text, $backgroundColor: $colorBlack) {
     display: $display;
     align-items: $align;
     background-clip: $backgroundClip;
     background-color: $backgroundColor;
 }
-@mixin bannerContainerTextTitleH1 ($margin: 0, $fontSize: $FontSize48, $fontWeight: $FontW700, $color: $colorWhite, $textShadow: $boxShadow){
+
+@mixin bannerContainerTextTitleH1($margin: 0, $fontSize: $FontSize48, $fontWeight: $FontW700, $color: $colorWhite, $textShadow: $boxShadow) {
     margin: $margin;
     font-size: $fontSize;
     font-weight: $fontWeight;
     color: $color;
     text-shadow: $textShadow;
 }
-@mixin bannerBefore60 ($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba60, $border-radius: $borderRadius25){  
+
+@mixin bannerBefore60($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba60, $borderRadius: $borderRadius25) {  
     display: $display;
     content: $content;
     position: $position;
@@ -175,9 +200,10 @@ $objectFitContain: contain;
     width: $width;
     height: $height;
     background-color: $backgroundColor;
-    border-radius: $border-radius;
+    border-radius: $borderRadius;
 }
-@mixin bannerBefore30 ($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba30, $border-radius: $borderRadius25){
+
+@mixin bannerBefore30($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $backgroundColor: $bckColorBlackRgba30, $borderRadius: $borderRadius25) {
     display: $display;
     content: $content;
     position: $position;
@@ -186,10 +212,11 @@ $objectFitContain: contain;
     width: $width;
     height: $height;
     background-color: $backgroundColor;
-    border-radius: $border-radius;
+    border-radius: $borderRadius;
 }
-//Note: Mixins pour le CollapseBtn
-@mixin collapseListBtnContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $margin: 1% 7% 3% 7%, $rowGap: 30px){
+
+// NOTE: Mixins pour le CollapseBtn
+@mixin collapseListBtnContainer($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $margin: 1% 7% 3% 7%, $rowGap: 30px) {
     display: $display;
     flex-flow: $flex;
     justify-content: $justify;
@@ -197,14 +224,16 @@ $objectFitContain: contain;
     margin: $margin;
     row-gap: $rowGap;
 }
-@mixin collapseBtnContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $flexSpaceBetween, $align: $alignCenter, $width:$width100){
+
+@mixin collapseBtnContainer($display: $displayFlex, $flex: $flexColumn, $justify: $flexSpaceBetween, $align: $alignCenter, $width: $width100) {
     display: $display;
     flex-flow: $flex;
     justify-content: $justify;
     align-items: $align;
     width: $width;
 }
-@mixin collapseBtnContainerBtn ($display: $displayFlex, $justify: $flexSpaceBetween, $align: $alignCenter, $width:82%, $height: 52px, $backgroundColor: $bckColorToggleBtn, $color: $colorWhite, $borderRadius: $borderRadius5){
+
+@mixin collapseBtnContainerBtn($display: $displayFlex, $justify: $flexSpaceBetween, $align: $alignCenter, $width: 82%, $height: 52px, $backgroundColor: $bckColorToggleBtn, $color: $colorWhite, $borderRadius: $borderRadius5) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
@@ -214,12 +243,14 @@ $objectFitContain: contain;
     color: $color;
     border-radius: $borderRadius;
 }
-@mixin collapseBtnTitle ($fontSize: $FontSize24, $fontWeight: $FontW700, $padding: 10px 15px 8px 15px){
+
+@mixin collapseBtnTitle($fontSize: $FontSize24, $fontWeight: $FontW700, $padding: 10px 15px 8px 15px) {
     font-size: $fontSize;
     font-weight: $fontWeight;
     padding: $padding;
 }
-@mixin collapseBtnIcon ($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $padding: 0px 15px 0px 0px, $width: 5%, $height: 40px, $cursor: pointer, $border: none){
+
+@mixin collapseBtnIcon($display: $displayFlex, $justify: $justifyCenter, $align: $alignCenter, $padding: 0px 15px 0px 0px, $width: 5%, $height: 40px, $cursor: $cursorPointer, $border: none) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
@@ -229,7 +260,8 @@ $objectFitContain: contain;
     cursor: $cursor;
     border: $border;
 }
-@mixin collapseBtnContent ($display: none, $width: 82%, $height: 100%, $backgroundColor: $bckColorArticle, $borderRadius: 5px, $padding: 30px 25px){
+
+@mixin collapseBtnContent($display: none, $width: 82%, $height: $height100, $backgroundColor: $bckColorArticle, $borderRadius: $borderRadius5, $padding: 30px 25px) {
     display: $display;
     width: $width;
     height: $height;
@@ -237,14 +269,15 @@ $objectFitContain: contain;
     border-radius: $borderRadius;
     padding: $padding;
 }
-@mixin collapseBtnContentText ($lineHeight: 2, $fontSize: $FontSize18, $fontWeight: $fontW400){
+
+@mixin collapseBtnContentText($lineHeight: 2, $fontSize: $FontSize18, $fontWeight: $FontW400) {
     line-height: $lineHeight;
     font-size: $fontSize;
     font-weight: $fontWeight;
 }
 
-//NOTE: Mixins pour la page d'erreur 404
-@mixin errorContainer ($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $rowGap: 10vh, $padding: 9.5%, $height: fit-content){
+// NOTE: Mixins pour la page d'erreur 404
+@mixin errorContainer($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $rowGap: 10vh, $padding: 9.5%, $height: fit-content) {
     display: $display;
     flex-flow: $flex;
     justify-content: $justify;
@@ -253,17 +286,20 @@ $objectFitContain: contain;
     padding: $padding;
     height: $height;
 }
-@mixin errorTitle ($fontWeight: $FontW700, $fontSize: $FontSize228, $color: $bckColorToggleBtn){
+
+@mixin errorTitle($fontWeight: $FontW700, $fontSize: $FontSize228, $color: $bckColorToggleBtn) {
     font-weight: $fontWeight;
     font-size: $fontSize;
     color: $color;
 }
-@mixin errorMessage ($fontWeight: $FontW500, $fontSize: $FontSize36, $color: $bckColorToggleBtn){
+
+@mixin errorMessage($fontWeight: $FontW500, $fontSize: $FontSize36, $color: $bckColorToggleBtn) {
     font-weight: $fontWeight;
     font-size: $fontSize;
     color: $color;
 }
-@mixin errorLink ($fontWeight: $FontW500, $fontSize: $FontSize18, $color: $colorBlack, $textUnderlineOffset: 0.15em, $textDecorationSkipInk: none){
+
+@mixin errorLink($fontWeight: $FontW500, $fontSize: $FontSize18, $color: $colorBlack, $textUnderlineOffset: 0.15em, $textDecorationSkipInk: none) {
     font-weight: $fontWeight;
     font-size: $fontSize;
     color: $color;
@@ -271,36 +307,144 @@ $objectFitContain: contain;
     text-decoration-skip-ink: $textDecorationSkipInk;
 }
 
+// NOTE: Mixins pour accommodations (slidingPicture, tags, ratingStars, headerInfos)
+@mixin slidingPicture($height: 415px, $overflow: hidden, $position: $relative, $borderRadius: $borderRadius25) {
+    height: $height;
+    overflow: $overflow;
+    position: $position;
+    border-radius: $borderRadius;
+}
 
-//NOTE: Animation et Keyframes
+@mixin slidingPictureContainer($position: $relative, $width: $width100, $height: $height100) {
+    position: $position;
+    width: $width;
+    height: $height;
+}
+
+@mixin slidingPictureContainerImg($position: $absolute, $width: $width100, $height: $height100, $objectFit: $objectFitCover, $transition: $transitionOpacity, $opacity: $opacity0) {
+    position: $position;
+    width: $width;
+    height: $height;
+    object-fit: $objectFit;
+    transition: $transition;
+    opacity: $opacity;
+}
+
+@mixin slidingPictureContainerImgActive($opacity: $opacity1) {
+    opacity: $opacity;
+}
+
+@mixin slidingPictureContainerPreviousNext($position: $absolute, $top: 50%, $transform: $transformTranslateY-50, $zIndex: $zIndex1, $cursor: $cursorPointer) {
+    position: $position;
+    top: $top;
+    transform: $transform;
+    z-index: $zIndex;
+    cursor: $cursor;
+}
+
+@mixin slidingPictureContainerPrevious($left: 0, $marginLeft: 1.5%) {
+    left: $left;
+    margin-left: $marginLeft;
+}
+
+@mixin slidingPictureContainerNext($right: 0, $marginRight: 1.5%) {
+    right: $right;
+    margin-right: $marginRight;
+}
+
+@mixin slidingPictureCounter($position: $absolute, $top: 90%, $left: 50%, $transform: $transformTranslateX-50, $zIndex: $zIndex1, $color: $colorWhite, $fontSize: $FontSize18, $fontWeight: $FontW500) {
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: $transform;
+    z-index: $zIndex;
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin slidingIconSvg($fontSize: 5rem, $color: $colorWhite) {
+    font-size: $fontSize;
+    color: $color;
+}
+
+@mixin accommodationHeader($display: $displayFlex, $justify: $flexSpaceBetween, $align: $alignCenter,) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin rentContainer($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $height: 170px, $rowGap: 5%) {
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    height: $height;
+    row-gap: $rowGap;
+}
+@mixin rentName($fontWeight: $FontW500, $fontSize: $FontSize36, $color: $bckColorToggleBtn) {
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
+}
+@mixin surnameFirstname($color: $bckColorToggleBtn, $fontWeight: $FontW500, $fontSize: $FontSize18) {
+    color: $color;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+}   
+@mixin host($display: $displayFlex, $align: $alignCenter) {
+    display: $display;
+    align-items: $align;
+}
+@mixin hostDescription($display: $displayFlex, $flex: $flexColumn, $justify: $justifyCenter, $align: $alignCenter, $fontWeight: $FontW500, $rowGap: 5%, $height: $height100,$width: $width100) {
+    display: $display;
+    flex-flow: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    font-weight: $fontWeight;
+    row-gap: $rowGap;
+    width: $width;
+    height: $height;
+}
+@mixin hostPicture($width: 100%, $height: 100%, $display: $displayFlex, $align: $alignCenter) {
+    width: $width;
+    height: $height;
+    display: $display;
+    align-items: $align;
+}
+@mixin hostPictureImg($clipPath: circle(50% at 50% 50%), $width: $width100, $objectFit: $objectFitCover) {
+    clip-path: $clipPath;
+    width: $width;
+    object-fit: $objectFit;
+}
+
+// NOTE: Animation et Keyframes
 // Info: Animation pour faire coulisser le texte du haut vers le bas
 @keyframes slideDown {
     from {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: $opacity0;
+        transform: $transformTranslateY-50;
     }
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: $opacity1;
+        transform: $transformTranslateY0;
     }
-  }
-  
-  // Info: Animation pour faire coulisser le texte du bas vers le haut
-  @keyframes slideUp {
+}
+
+// Info: Animation pour faire coulisser le texte du bas vers le haut
+@keyframes slideUp {
     from {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: $opacity1;
+        transform: $transformTranslateY0;
     }
     to {
-      opacity: 0;
-      transform: translateY(-20px);
+        opacity: $opacity0;
+        transform: $transformTranslateY-50;
     }
-  }
-  
-  @mixin slideDownAnimation($duration: 0.5s, $timingFunction: ease-in-out) {
+}
+
+@mixin slideDownAnimation($duration: 0.5s, $timingFunction: $easeInOut) {
     animation: slideDown $duration $timingFunction;
-  }
-  
-  @mixin slideUpAnimation($duration: 0.5s, $timingFunction: ease-in-out) {
+}
+
+@mixin slideUpAnimation($duration: 0.5s, $timingFunction: $easeInOut) {
     animation: slideUp $duration $timingFunction;
-  }
+}

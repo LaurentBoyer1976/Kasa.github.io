@@ -1,16 +1,17 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
+import "../../Css/Components/SlidingPicture.css";
 
 const LeftArrow = () => {
     return (
         <FontAwesomeIcon
             icon={faChevronLeft}
-            className="slidingPicture__container--previous-icon"        
+            className="slidingPicture__container--previous-icon"
         />
     );
 }
+
 const RightArrow = () => {
     return (
         <FontAwesomeIcon
@@ -32,16 +33,29 @@ const SlidingPicture = ({ logement }) => {
     const handlePrevious = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + gallery.length) % gallery.length);
     };
+
     return (
         <div type='slideshow' className='slidingPicture'>
             <div className='slidingPicture__container'>
-                <span className='slidingPicture__container--previous' onClick={handlePrevious}><LeftArrow /></span>
-                <img src={gallery[currentIndex]} alt={logement.title} className="slidingPicture__container--img" />            
-                <span className='slidingPicture__container--next' onClick={handleNext}><RightArrow /></span>
+                {totalPictures > 1 && (
+                    <span className='slidingPicture__container--previous' onClick={handlePrevious}><LeftArrow /></span>
+                )}
+                {gallery.map((picture, index) => (
+                    <img
+                        key={index}
+                        src={picture}
+                        alt={`Slide ${index}`}
+                        className={`slidingPicture__container--img ${index === currentIndex ? 'active' : ''}`}
+                    />
+                ))}
+                {totalPictures > 1 && (
+                    <span className='slidingPicture__container--next' onClick={handleNext}><RightArrow /></span>
+                )}
             </div>
-            { totalPictures <= 1 ? null : <span className='picture__counter'>{currentIndex+1}/{totalPictures}</span>}            
+            {totalPictures > 1 && (
+                <span className='picture__counter'>{currentIndex + 1}/{totalPictures}</span>
+            )}
         </div>
-        
     );
 };
 

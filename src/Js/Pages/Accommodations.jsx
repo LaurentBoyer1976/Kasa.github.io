@@ -5,6 +5,10 @@ import Banner from '../Components/Banner.jsx';
 import SlidingPicture from '../Components/SlidingPicture.jsx';
 import AccommodationHeader from '../Components/AccommodationHeader.jsx';
 import AccommodationInformations from '../Components/AccommodationInformation.jsx';
+import '../../Css/Pages/Accommodations.css';
+//import '../../Css/Components/SlidingPicture.css';
+  
+
 
 
 

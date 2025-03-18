@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+}
+.accommodation__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accommodation__header .rent__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 170px;
+  row-gap: 5%;
+}
+.accommodation__header .rent__container--name {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: #FF6060;
+}
+.accommodation__header .rent__container--location {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.accommodation__header .host {
+  display: flex;
+  align-items: center;
+}
+.accommodation__header .host__description {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  row-gap: 5%;
+  width: 100%;
+  height: 100%;
+}
+.accommodation__header .host__description--surname, .accommodation__header .host__description--firstname {
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.accommodation__header .host__picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.accommodation__header .host__picture--img {
+  clip-path: circle(50% at 50% 50%);
+  width: 100%;
+  object-fit: cover;
+}
+
+/*# sourceMappingURL=AccommodationHeader_Infos.css.map */

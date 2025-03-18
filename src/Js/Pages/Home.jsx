@@ -4,6 +4,7 @@ import Banner from '../Components/Banner.jsx';
 import BannerTitle from '../Components/BannerTitle.jsx';
 import homeBannerImg from '../../assets/IMG/BannerPicture.png';
 import Cards from '../Components/Cards.jsx';
+import '../../Css/Components/Banner.css';
 
 const Home = () => {   
     return (
