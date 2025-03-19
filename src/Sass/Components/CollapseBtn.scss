@@ -28,7 +28,7 @@
                 @include vm.toDownToUp;                                       
             }
             .toDownToUp[aria-hidden="false"]{              
-                max-height: 200px;
+                max-height: 500px;
             }
             .toDownToUp[aria-hidden="true"]{               
                 max-height: 0;
@@ -37,5 +37,42 @@
              @include vm.collapseBtnContentText;
             }
         }        
+    }
+}
+@media (max-width: 1023px) and (min-width: 320px) {
+    .CollapseListBtn__container {
+        margin: 5%;
+        row-gap: 20px;
+    }
+
+    .collapseBtn__container {
+        height: auto;
+
+        .collapseBtn__container--btn {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .collapseBtn__container--title {
+            font-size: 0.85rem !important;
+        }
+    }
+
+    .collapseBtn__container--content {
+        width: 100% !important;
+        overflow: hidden; // Empêche le débordement du contenu
+        max-height: 0; // Hauteur initiale fermée
+        transition: max-height 0.15s ease-in-out; // Transition fluide pour l'ouverture et la fermeture
+    }
+
+    .collapseBtn__container--content[aria-hidden="false"] {
+        max-height: 500px; // Ajustez cette valeur pour couvrir la hauteur maximale du contenu
+    }
+
+    .collapseBtn__container--content[aria-hidden="true"] {
+        max-height: 0; // Réduit la hauteur à 0 lorsqu'il est fermé
+    }
+    .contentText{
+        font-size: 0.75rem !important;
     }
 }

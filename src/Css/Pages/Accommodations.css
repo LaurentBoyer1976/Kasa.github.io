@@ -52,6 +52,34 @@
   object-fit: cover;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .accommodation__header {
+    flex-flow: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .accommodation__header .rent__container {
+    margin-top: 4%;
+    height: 80%;
+  }
+  .accommodation__header .rent__container--name {
+    font-size: 1.125rem;
+    width: 100%;
+  }
+  .accommodation__header .rent__container--location {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+  .accommodation__header .host {
+    position: absolute;
+    bottom: -100%;
+    width: 26%;
+    align-self: flex-end;
+  }
+  .accommodation__header .host__description--surname, .accommodation__header .host__description--firstname {
+    font-size: 0.75rem;
+  }
+}
 .tags__container {
   display: flex;
   flex-flow: row nowrap;
@@ -69,6 +97,18 @@
   white-space: nowrap;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .tags__container {
+    width: 100%;
+    height: 40%;
+    align-items: flex-start;
+  }
+  .tags__container .tags__container--tag {
+    text-align: center;
+    font-size: 0.625rem;
+    padding: 0.8% 2%;
+  }
+}
 .rating {
   display: flex;
   justify-content: center;
@@ -95,6 +135,21 @@
   color: #E3E3E3;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .rating {
+    width: 100%;
+    height: 30%;
+  }
+  .rating__container {
+    justify-content: flex-start;
+    column-gap: 2%;
+    align-items: flex-end;
+  }
+  .rating__container--Stars svg {
+    width: 13px;
+    height: 13px;
+  }
+}
 .accommodations {
   margin: 1% 7% 3% 7%;
 }
@@ -168,7 +223,8 @@
   width: 100%;
   height: auto;
   background-color: #f6f6f6;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .accommodations .informations .collapseBtn__container--content .toDownToUp {
   overflow: hidden;
@@ -176,7 +232,7 @@
   transition: max-height 0.15s ease-in-out;
 }
 .accommodations .informations .collapseBtn__container--content .toDownToUp[aria-hidden=false] {
-  max-height: 300px;
+  max-height: 500px;
 }
 .accommodations .informations .collapseBtn__container--content .toDownToUp[aria-hidden=true] {
   max-height: 0;
@@ -187,11 +243,58 @@
   font-weight: 400;
   padding: 30px 25px;
 }
+.accommodations .informations .collapseBtn__container--content .contentText p {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
 .accommodations .informations .collapseBtn__container--content .equipments__list {
   line-height: 2;
   font-size: 1.125rem;
   font-weight: 400;
   padding: 30px 25px;
+}
+.accommodations .informations .collapseBtn__container--content .equipments__list--item {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1023px) and (min-width: 320px) {
+  .banner {
+    width: 100%;
+    height: 255px !important;
+  }
+  .banner .banner__container {
+    min-height: 100% !important;
+  }
+  .informations {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 180px;
+    row-gap: 10px;
+  }
+  .informations .tagsAndStars {
+    width: 100%;
+    min-height: 70px;
+    flex-direction: column !important;
+    justify-content: space-around !important;
+  }
+  .informations .informationsToggleBtn {
+    flex-direction: column;
+    justify-content: space-evenly !important;
+    min-height: 100px;
+    margin-top: 0;
+    row-gap: 10px;
+  }
+  .informations .informationsToggleBtn p {
+    font-size: 0.75rem;
+    padding: 15px 12.5px !important;
+  }
+  .informations .equipments__list {
+    padding: 15px 12.5px !important;
+  }
+  .informations .equipments__list--item {
+    font-size: 0.75rem !important;
+  }
 }
 
 /*# sourceMappingURL=Accommodations.css.map */

@@ -51,4 +51,26 @@
   font-weight: 500;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .slidingPicture {
+    height: 100%;
+    border-radius: 10px;
+  }
+  .slidingPicture__container {
+    height: 100%;
+  }
+  .slidingPicture__container--previous, .slidingPicture__container--next {
+    width: 24px;
+    height: 24px;
+  }
+  .slidingPicture__container--previous svg, .slidingPicture__container--next svg {
+    font-size: 1.5rem !important;
+    width: 24px;
+    height: 24px;
+  }
+  .picture__counter {
+    visibility: hidden;
+  }
+}
+
 /*# sourceMappingURL=SlidingPicture.css.map */

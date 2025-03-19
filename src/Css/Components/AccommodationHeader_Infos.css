@@ -52,4 +52,33 @@
   object-fit: cover;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .accommodation__header {
+    flex-flow: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .accommodation__header .rent__container {
+    margin-top: 4%;
+    height: 80%;
+  }
+  .accommodation__header .rent__container--name {
+    font-size: 1.125rem;
+    width: 100%;
+  }
+  .accommodation__header .rent__container--location {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+  .accommodation__header .host {
+    position: absolute;
+    bottom: -100%;
+    width: 26%;
+    align-self: flex-end;
+  }
+  .accommodation__header .host__description--surname, .accommodation__header .host__description--firstname {
+    font-size: 0.75rem;
+  }
+}
+
 /*# sourceMappingURL=AccommodationHeader_Infos.css.map */

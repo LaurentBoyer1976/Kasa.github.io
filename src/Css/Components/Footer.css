@@ -37,4 +37,20 @@
   margin: 15% 0 0 0;
 }
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer .footer__container--legal {
+    width: 51%;
+  }
+  .footer .footerLogo {
+    width: 35%;
+  }
+  .footer .legalMention {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=Footer.css.map */
