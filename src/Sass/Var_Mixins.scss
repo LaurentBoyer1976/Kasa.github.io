@@ -71,6 +71,8 @@ $flexSpaceBetween: space-between;
 $flexSpaceAround: space-around;
 $flexStart: flex-start;
 $flexEnd: flex-end;
+$flexRowWrap: row wrap;
+$flexColumnNoWrap: column nowrap;
 
 // Info: Align-items
 $alignCenter: center;
@@ -220,6 +222,61 @@ $cursorPointer: pointer;
     height: $height;
     background-color: $backgroundColor;
     border-radius: $borderRadius;
+}
+//Note : Mixins pour les cartes
+@mixin cardsContainer($display: $displayFlex, $justify: $flexSpaceBetween, $overflow: scroll, $maxHeight: 860px, $flexFlow: $flexRowWrap) {
+    display: $display;
+    justify-content: $justify;
+    overflow: $overflow;
+    max-height: $maxHeight;
+    flex-flow: $flexFlow;
+}
+@mixin cardLink($textDecoration: none, $position: $relative, $display: $displayFlex, $overflow: hidden, $width: 340px, $height: 340px, $borderRadius: $borderRadius10, $aspectRatio: 1/1, $boxShadow: $boxShadow, $marginTop: 2%, $marginBottom: 2%) {
+    text-decoration: $textDecoration;
+    position: $position;
+    display: $display;
+    overflow: $overflow;
+    width: $width;
+    height: $height;
+    border-radius: $borderRadius;
+    aspect-ratio: $aspectRatio;
+    box-shadow: $boxShadow;
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+}
+@mixin linkContainer($display: $displayFlex, $align: $alignEnd, $position: $relative, $width: $width100, $height: 1$height100) {
+    display: $display;
+    align-items: $align;
+    position: $position;
+    width: $width;
+    height: $height;
+}
+@mixin linkBefore($display: $displayFlex, $content: "", $position: $absolute, $top: 0, $left: 0, $width: $width100, $height: $height100, $background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4)), $borderRadius: $borderRadius10) {
+    display: $display;
+    content: $content;
+    position: $position;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+    background: $background;
+    border-radius: $borderRadius;
+}
+@mixin cardLinkImg($width: $width100, $height: $height100, $objectFit: $objectFitCover) {
+    width: $width;
+    height: $height;
+    object-fit: $objectFit;
+}
+@mixin cardCaption($display: $displayFlex, $width: 62%, $margin: auto auto 20px 20px, $position: $absolute) {
+    display: $display;
+    width: $width;
+    margin: $margin;
+    position: $position;
+}
+@mixin captionTitle($fontWeight: $FontW700, $fontSize: $FontSize18, $color: $colorWhite) {
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    color: $color;
 }
 
 // NOTE: Mixins pour le CollapseBtn
@@ -443,6 +500,38 @@ $cursorPointer: pointer;
     justify-content: $justify;
     align-items: $align;
 }
+//Note : mixins pour le Footer
+@mixin footer($display: $displayFlex, $flex: $flexColumnNoWrap, $align: $alignCenter, $justify: $justifyEnd, $width: $width100, $minHeight: 210px, $backgroundColor: #000000) {
+    display: $display;
+    flex-flow: $flex;
+    align-items: $align;
+    justify-content: $justify;
+    width: $width;
+    min-height: $minHeight;
+    background-color: $backgroundColor;
+}
+@mixin footerContainer($display: $displayFlex, $flex: $flexColumnNoWrap, $align: $alignCenter, $rowGap: 2%, $padding: 2%) {
+    display: $display;
+    flex-flow: $flex;
+    align-items: $align;    
+    row-gap: $rowGap;
+    padding: $padding;
+}
+@mixin containerLogo($height: $height100, $width:$width100, $justify: $justifyCenter) {
+    height: $height;
+    width: $width;
+    justify-content: $justify;
+}
+@mixin footerLogo($height: $height100, $margin: 0 25%, $align: center) {
+    height: $height;
+    margin: $margin;
+    align-self: $align;
+}
+@mixin legalMention($fontSize: $FontSize24, $color: $colorWhite) {
+    font-size: $fontSize;
+    color: $color;
+}
+
 //Note : Mixins pour les écrans de taille inférieure à 1023px
 @mixin media1023($maxWidth: 1023px, $minWidth: 320px) {
     @media (max-width: $maxWidth) and (min-width: $minWidth) {

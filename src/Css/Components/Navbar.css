@@ -6,10 +6,9 @@
   background-color: #fff;
 }
 .nav .containerLogo {
-  display: flex;
-  align-items: center;
-  width: 20%;
   height: 100%;
+  width: 100%;
+  justify-content: center;
 }
 .nav .containerLogo__Kasa {
   height: 64%;

@@ -1,77 +1,39 @@
 @use "../Var_Mixins.scss" as vm;
 
 .cards__container{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    overflow: scroll;
-    max-height: 860px;
+    @include vm.cardsContainer;
 }
-
 .cardLink {  
-    text-decoration: none;
-    position: relative;
-    display: flex;    
-    overflow: hidden;
-    width: 340px;
-    height: 340px;
-    border-radius: 10px;
-    aspect-ratio: 1/1;
-    box-shadow: 0 4px 12px rgba(0,0,0,.15);
-    margin-top :2%;
-    margin-bottom: 2%;
+    @include vm.cardLink;
     &__container{
-        display: flex;
-        align-items: flex-end;        
-        position: relative;
-        width: 100%;
-        height: 100%;
+        @include vm.linkContainer;
         &::before{
-            display: flex;
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.05),
-                                        rgba(0, 0, 0, 0.1),
-                                        rgba(0, 0, 0, 0.25),
-                                        rgba(0, 0, 0, 0.4));
-            
-            border-radius: 10px;    
+            @include vm.linkBefore;               
           }
         &--Img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include vm.cardLinkImg;           
         }
         &--caption{
-            display: flex;
-            width: 52%;
-            margin: auto auto 20px 20px;
-            position: absolute;
-            &-title{                
-                font-weight: vm.$FontW700;
-                font-size: vm.$FontSize18;
-                color: vm.$colorWhite;
+            @include vm.cardCaption;            
+            &-title{
+                @include vm.captionTitle;                                
             }
         }
     }
 }
-// Styles pour les dimensions comprises entre 320px et 1024px
+// Info: Styles pour les dimensions comprises entre 320px et 1023px
 @media (max-width: 1023px) and (min-width: 320px){
     .cards__container{
         overflow-y: auto;              
-        scroll-behavior: smooth; // Ajoute un défilement fluide
-        // Masque la scrollbar
+        scroll-behavior: smooth; 
+        
         &::-webkit-scrollbar {
-            display: none; // Masque la scrollbar sur les navigateurs basés sur WebKit
+            display: none; 
         }
-        -ms-overflow-style: none; // Masque la scrollbar sur Internet Explorer et Edge       
+        -ms-overflow-style: none;
     .cardLink{
         height: 235px;
-        width: 335px;
+        width: 100%
     }
 }
 }

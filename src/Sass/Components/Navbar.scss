@@ -26,19 +26,19 @@
      // Styles pour les dimensions comprises entre 320px et 1024px
      @media (max-width: 1023px) and (min-width: 320px) {
         .containerLogo {
-            width: 30%; // Réduit la taille du logo
+            width: 30%; 
             &__Kasa {
-                height: 50%; // Ajuste la hauteur du logo
+                height: 50%; 
             }
         }
 
         .navList {           
-            width: 100%; // Prend toute la largeur disponible
-            column-gap: 10%; // Ajoute un espace entre les éléments
+            width: 100%; 
+            column-gap: 10%; 
             .navLink {
                 &__link {
-                    font-size: 0.75rem; // Réduit la taille de la police
-                    text-align: center; // Centre les liens
+                    font-size: 0.75rem; 
+                    text-align: center; 
                 }
             }
         }
