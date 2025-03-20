@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom'; // Ajout pour toBeInTheDocument
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import Accommodations from '../src/Js/Pages/Accommodations.jsx';
 import logements from '../Datas/logements.json';
-import { describe, it, expect } from 'jest';
+import { describe, it, expect } from '@jest/globals';
+import PropTypes from 'prop-types';
 
 describe('Accommodations', () => {
     it('renders accommodation details when ID exists', () => {
@@ -28,5 +30,35 @@ describe('Accommodations', () => {
             </MemoryRouter>
         );
         expect(getByText('404 Not Found')).toBeInTheDocument();
+    });
+
+    it('validates props types', () => {
+        Accommodations.propTypes = {
+            logement: PropTypes.shape({
+                id: PropTypes.string.isRequired,
+                title: PropTypes.string.isRequired,
+                cover: PropTypes.string.isRequired,
+                pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
+                description: PropTypes.string.isRequired,
+                host: PropTypes.shape({
+                    name: PropTypes.string.isRequired,
+                    picture: PropTypes.string.isRequired,
+                }).isRequired,
+                rating: PropTypes.string.isRequired,
+                location: PropTypes.string.isRequired,
+                equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
+                tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+            }).isRequired,
+        };
+        const logement = logements[0];
+        expect(() => {
+            render(
+                <MemoryRouter initialEntries={[`/accommodations/${logement.id}`]}>
+                    <Routes>
+                        <Route path="accommodations/:id" element={<Accommodations />} />
+                    </Routes>
+                </MemoryRouter>
+            );
+        }).not.toThrow();
     });
 });
