@@ -33,6 +33,7 @@
         flex-flow: column;
         justify-content: flex-end;
         position: relative;
+        align-items: unset;
         .rent__container{
             margin-top: 4%;
             height: 80%;
@@ -47,10 +48,12 @@
         }
         .host{
             position: absolute;
-            bottom: -100%;
-            width: 26%;
-            align-self: flex-end;
-            &__description{
+            bottom: -80px;
+            right: 0;
+            width: 32%;
+            column-gap: 5%;
+            flex-direction: row;            
+            &__description{                
                 &--surname, &--firstname{
                     font-size: vm.$FontSize12;
                 }                

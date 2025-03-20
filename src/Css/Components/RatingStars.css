@@ -5,8 +5,8 @@
 }
 .rating__container {
   display: flex;
-  justify-content: center;
-  column-gap: 10%;
+  justify-content: flex-end;
+  column-gap: 5%;
   width: 100%;
 }
 .rating__container--Stars {

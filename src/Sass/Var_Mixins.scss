@@ -489,7 +489,7 @@ $cursorPointer: pointer;
     display: $display;
     justify-content: $justify;
 }
-@mixin ratingContainer($display: $displayFlex, $justify: $justifyCenter, $columnGap: 10%, $width: $width100) {
+@mixin ratingContainer($display: $displayFlex, $justify: $justifyEnd, $columnGap: 5%, $width: $width100) {
     display: $display;
     justify-content: $justify;
     column-gap: $columnGap;

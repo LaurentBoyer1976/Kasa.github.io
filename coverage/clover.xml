@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1742472295453" clover="3.2.0">
-  <project timestamp="1742472295454" name="All files">
+<coverage generated="1742477110020" clover="3.2.0">
+  <project timestamp="1742477110020" name="All files">
     <metrics statements="118" coveredstatements="114" conditionals="44" coveredconditionals="40" methods="52" coveredmethods="48" elements="214" coveredelements="202" complexity="0" loc="118" ncloc="118" packages="5" files="22" classes="22"/>
     <package name="Kasa.github.io">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
