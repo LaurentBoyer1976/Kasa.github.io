@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.accommodation__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.accommodation__header .rent__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 170px;
+  row-gap: 5%;
+}
+.accommodation__header .rent__container--name {
+  font-weight: 500;
+  font-size: 2.25rem;
+  color: #FF6060;
+}
+.accommodation__header .rent__container--location {
+  color: #000;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.accommodation__header .host {
+  display: flex;
+  align-items: center;
+}
+.accommodation__header .host__description {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  row-gap: 5%;
+  width: 100%;
+  height: 100%;
+}
+.accommodation__header .host__description--surname, .accommodation__header .host__description--firstname {
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+.accommodation__header .host__picture {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.accommodation__header .host__picture--img {
+  clip-path: circle(50% at 50% 50%);
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1023px) and (min-width: 320px) {
+  .accommodation__header {
+    flex-flow: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .accommodation__header .rent__container {
+    margin-top: 4%;
+    height: 80%;
+  }
+  .accommodation__header .rent__container--name {
+    font-size: 1.125rem;
+    width: 100%;
+  }
+  .accommodation__header .rent__container--location {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+  .accommodation__header .host {
+    position: absolute;
+    bottom: -100%;
+    width: 26%;
+    align-self: flex-end;
+  }
+  .accommodation__header .host__description--surname, .accommodation__header .host__description--firstname {
+    font-size: 0.75rem;
+  }
+}
+
+/*# sourceMappingURL=AccommodationHeader_Infos.css.map */

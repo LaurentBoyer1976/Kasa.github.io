@@ -3,7 +3,7 @@ import React from "react";
 const BannerImg = ({logement}) => {
     const {cover, id} = logement;
     return (
-        <img type='image' className="bannerImg" src={cover} key={id} alt="banner" />
+        <img type='image' className="banner__container--img" src={cover} key={id} alt="banner" />
     );
 };
 

@@ -17,10 +17,9 @@
   padding: 2%;
 }
 .footer__container--logo {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   height: 100%;
+  width: 100%;
+  justify-content: center;
 }
 .footer__container .footerLogo {
   height: 100%;
@@ -28,13 +27,27 @@
   align-self: center;
 }
 .footer__container--legal {
-  display: flex;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
-  color: #FFFFFF;
+  color: #fff;
 }
 .footer__container--legal .legalMention {
   margin: 15% 0 0 0;
+}
+
+@media (max-width: 1023px) and (min-width: 320px) {
+  .footer {
+    justify-content: center !important;
+  }
+  .footer .footer__container--legal {
+    width: 51%;
+  }
+  .footer .footerLogo {
+    width: 35%;
+  }
+  .footer .legalMention {
+    font-size: 0.75rem;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=Footer.css.map */

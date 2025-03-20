@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"Tags.css"}
+{"version":3,"sourceRoot":"","sources":["../../Sass/Var_Mixins.scss","../../Sass/Components/Tags.scss"],"names":[],"mappings":"AAAQ;ACER;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI,kBDeY;ECdZ;EACA;EACA,ODaK;ECZL,aDOG;ECNH,WDLK;ECML;;;AAGR;EACI;IACI;IACA;IACA;;EACA;IACI;IACA,WDlBC;ICmBD","file":"Tags.css"}

@@ -27,7 +27,10 @@ const CollapseBtn = ({ id, title, children }) => {
     };
     return (
         <div className="collapseBtn__container" key={id}>
-            <div className="collapseBtn__container--btn">
+            <div className="collapseBtn__container--btn"
+                role="button"
+                aria-label="collapse button"
+                aria-expanded={isOpen}>
                 <h2 className="collapseBtn__container--title">{title}</h2>
                     <span className="collapseBtn__container--btn-icon"
                         role="button"
@@ -41,8 +44,14 @@ const CollapseBtn = ({ id, title, children }) => {
             <div 
                 className="collapseBtn__container--content"
                 aria-hidden={!isOpen}
-            >
-               {renderContent()}
+            >   
+                <div 
+                    className="toDownToUp"
+                    aria-hidden={!isOpen}
+                >                        
+                    {renderContent()}
+                </div>
+               
             </div>                                            
         </div>
     );    

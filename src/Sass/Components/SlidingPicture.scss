@@ -1,1 +1,54 @@
-// Contenu par défaut
+@use '../Var_Mixins.scss' as vm;
+
+.slidingPicture {
+    @include vm.slidingPicture;
+    &__container {
+        @include vm.slidingPictureContainer;
+        &--previous,
+        &--next {
+            @include vm.slidingPictureContainerPreviousNext;
+            svg {
+                @include vm.slidingIconSvg;
+            }
+        }    
+        &--previous {
+            @include vm.slidingPictureContainerPrevious;
+        }    
+        &--next {
+           @include vm.slidingPictureContainerNext;
+        }
+    }
+    &__container--img {
+        @include vm.slidingPictureContainerImg;
+    }
+    &__container--img.active {
+       @include vm.slidingPictureContainerImgActive;
+    }   
+    .picture__counter {
+        @include vm.slidingPictureCounter;
+    }
+}
+@media (max-width: 1023px) and (min-width: 320px) {
+    
+    .slidingPicture {
+        height: 100%;
+        border-radius: 10px;
+    }
+    .slidingPicture__container {
+        height: 100%;
+        &--previous,
+        &--next {
+            width: 24px;
+            height: 24px;
+            svg{
+                font-size: 1.5rem !important;
+                width: 24px;
+                height: 24px;
+            }
+        }        
+    }
+    .picture__counter {
+        visibility: hidden;
+    }
+    
+}

@@ -1,1 +1,30 @@
-// Contenu par défaut
+@use './../Var_Mixins.scss' as vm;
+
+.error__container{
+    @include vm.errorContainer;
+    
+    &--title{
+        @include vm.errorTitle;
+    }
+    &--message{
+        @include vm.errorMessage;
+    }
+    &--link{
+        @include vm.errorLink;
+    }
+}
+// Info : media queries
+@media screen and (max-width: 1023px) and (min-width: 320px){
+    .error__container{
+        &--title{
+           font-size: 96px;
+        }
+        &--message{
+            font-size: vm.$FontSize18;
+            text-align: center;
+        &--link{
+            font-size: vm.$FontSize14;
+        }
+    }    
+}
+}

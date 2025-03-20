@@ -1,7 +1,63 @@
-.banner__container--text{
-    height: 100px;
-}
-.bannerTitle {
-  font-size: 2rem;
-  color: #333;
+@use "../Var_Mixins.scss" as vm;
+
+.banner {
+  margin: 1% 7% 3% 7%;
+
+  .banner__container {
+    @include vm.bannerContainer;
+
+    &--img {
+      @include vm.bannerImg;
+    }
+
+    &::before {
+      @include vm.bannerBefore60;
+    }
+
+    .banner__container--text {
+      @include vm.bannerContainerText;
+
+      &-title {
+        @include vm.bannerContainerTextTitle;
+
+        &-h1 {
+          @include vm.bannerContainerTextTitleH1;
+        }
+      }
+    }
+  }
+
+  // Info : Media query pour les dimensions comprises entre 320px et 1023px
+  @media (max-width: 1023px) and (min-width: 320px) {   
+
+    .banner__container {
+      max-height: 115px;
+      justify-content: flex-start !important;
+      border-radius: 10px !important;
+
+      &--img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px !important;
+      }
+      &::before{
+        border-radius: 10px !important;
+      }
+
+      .banner__container--text {
+        width: 83%;
+        padding: 2% 5%;
+        border-radius: 10px !important;
+
+        .banner__container--text-title {
+          word-break: break-word;
+
+          &-h1 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
 }

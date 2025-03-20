@@ -2,52 +2,45 @@
 
 
 .nav{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #FFFFFF;
+    @include vm.Nav;
     .containerLogo{
-        display: flex;
-        align-items: center;
-        width:29%;
-        height: 100%;
-        &__Kasa{
-            width: 52%;
-            height: 64%;
-            padding: 2%;
+        @include vm.containerLogo;
+        &__Kasa{            
+            height: 64%;            
         }
     }
     .navList{
-        display: flex;
-        
-        margin: 0; 
-        padding: 0;
-        width: 100%;
-        justify-content: flex-end;
-        column-gap: 15%;
-        .navLink{
-            width: fit-content;
-            height: 100%;
-            list-style: none;
+        @include vm.navList;
+        .navLink{          
             &__link{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: fit-content;
-                height: 100%;
-                color: #000000;
-                font-size: 1rem;
-                font-weight: 700;
-                text-decoration: none;
-                font-family: vm.$mainFont;
-                font-size: vm.$FontSize24;
-                font-weight: vm.$FontW500;
+                @include vm.nav__Link;
                 &:hover{
                     text-decoration: underline;
-                    text-underline-offset: 0.25rem;
+                    text-underline-offset: 0.1em;
+                    text-decoration-skip-ink: none;                    
                 }
             }
 
+        }
+    }
+     // Styles pour les dimensions comprises entre 320px et 1024px
+     @media (max-width: 1023px) and (min-width: 320px) {
+        .containerLogo {
+            width: 30%; 
+            &__Kasa {
+                height: 50%; 
+            }
+        }
+
+        .navList {           
+            width: 100%; 
+            column-gap: 10%; 
+            .navLink {
+                &__link {
+                    font-size: 0.75rem; 
+                    text-align: center; 
+                }
+            }
         }
     }
 

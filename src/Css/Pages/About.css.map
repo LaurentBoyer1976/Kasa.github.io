@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../Sass/Pages/About.scss"],"names":[],"mappings":"AACA;EACI","file":"About.css"}
+{"version":3,"sourceRoot":"","sources":["../../Sass/Var_Mixins.scss","../../Sass/Pages/About.scss"],"names":[],"mappings":"AAAQ;ACER;EACI;;AACA;EDgKA,OAhHO;EAiHP,SAxGU;EAyGV,iBApFY;EAqFZ,aA1FU;EA2FV,UA/HO;EAgIP,eAxHa;EAyHb,YAlHQ;EClDJ;;AACI;EDuKR,YAvFiB;EAwFjB,eA9Ha;EA+Hb,OA5HO;EA6HP,QA5HQ;EA6HR,YAxFa;;AChFV;ED6MH,SA1JU;EA2JV,SAFoD;EAGpD,UA/KO;EAgLP,KAJoF;EAKpF,MAL8F;EAM9F,OAxKO;EAyKP,QAxKQ;EAyKR,kBAhMkB;EAiMlB,eA9Ka;;;AClCjB;EACI","file":"About.css"}

@@ -1,26 +1,107 @@
-<<<<<<< Updated upstream
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-.collapseBtn__container--btn {
-  width: 50%;
+.CollapseListBtn__container {
   display: flex;
-  border: 2px solid black;
-  border-radius: 5px;
-  padding: 10px 15px;
-  height: 55px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 7% 3% 7%;
+  row-gap: 30px;
+}
+.CollapseListBtn__container .collapseBtn__container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  height: 52px;
   background-color: #FF6060;
   color: #fff;
+  border-radius: 5px;
 }
-.collapseBtn__container--btn-icon {
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--btn .collapseBtn__container--title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 10px 15px 8px 15px;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--btn .collapseBtn__container--btn-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 20px;
-  height: 20px;
+  padding: 0px 15px 0px 0px;
+  width: 5%;
+  height: 40px;
   cursor: pointer;
   border: none;
 }
-=======
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--btn .collapseBtn__container--btn-icon svg {
+  font-size: 1rem;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--btn[aria-expanded=true] {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content {
+  display: flex;
+  width: 82%;
+  height: 100%;
+  background-color: #f6f6f6;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content .toDownToUp {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.15s ease-in-out;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content .toDownToUp[aria-hidden=false] {
+  max-height: 500px;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content .toDownToUp[aria-hidden=true] {
+  max-height: 0;
+}
+.CollapseListBtn__container .collapseBtn__container .collapseBtn__container--content .contentText {
+  line-height: 2;
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 30px 25px;
+}
 
->>>>>>> Stashed changes
+@media (max-width: 1023px) and (min-width: 320px) {
+  .CollapseListBtn__container {
+    margin: 5%;
+    row-gap: 20px;
+  }
+  .collapseBtn__container {
+    height: auto;
+  }
+  .collapseBtn__container .collapseBtn__container--btn {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .collapseBtn__container .collapseBtn__container--title {
+    font-size: 0.85rem !important;
+  }
+  .collapseBtn__container--content {
+    width: 100% !important;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.15s ease-in-out;
+  }
+  .collapseBtn__container--content[aria-hidden=false] {
+    max-height: 500px;
+  }
+  .collapseBtn__container--content[aria-hidden=true] {
+    max-height: 0;
+  }
+  .contentText {
+    font-size: 0.75rem !important;
+  }
+}
 
 /*# sourceMappingURL=CollapseBtn.css.map */

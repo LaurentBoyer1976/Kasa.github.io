@@ -1,1 +1,31 @@
-// Contenu par défaut
+@use './../Var_Mixins.scss' as vm;
+
+.tags__container{
+    display: flex;
+    flex-flow: row nowrap;
+    width:100%;
+    height: 100%;
+    column-gap: 3%;
+
+    .tags__container--tag{               
+        background-color: vm.$bckColorToggleBtn;        
+        padding: 0.5% 4%;
+        border-radius: 10px;
+        color: vm.$colorWhite;
+        font-weight: vm.$FontW700;
+        font-size: vm.$FontSize14;
+        white-space: nowrap;                     
+    }
+}
+@media (max-width: 1023px) and (min-width: 320px){
+    .tags__container{      
+        width: 100%;
+        height: 40%;      
+        align-items: flex-start;        
+        .tags__container--tag{
+            text-align: center;
+            font-size: vm.$FontSize10;
+            padding: 0.8% 2%;
+        }
+    }
+}

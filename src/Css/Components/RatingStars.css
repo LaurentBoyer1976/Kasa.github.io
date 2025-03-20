@@ -1,3 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.rating {
+  display: flex;
+  justify-content: center;
+}
+.rating__container {
+  display: flex;
+  justify-content: center;
+  column-gap: 10%;
+  width: 100%;
+}
+.rating__container--Stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating__container--Stars svg {
+  width: 24px;
+  height: 24px;
+}
+.rating__container--Stars-Pink {
+  color: #FF6060;
+}
+.rating__container--Stars-Grey {
+  color: #E3E3E3;
+}
 
+@media (max-width: 1023px) and (min-width: 320px) {
+  .rating {
+    width: 100%;
+    height: 30%;
+  }
+  .rating__container {
+    justify-content: flex-start;
+    column-gap: 2%;
+    align-items: flex-end;
+  }
+  .rating__container--Stars svg {
+    width: 13px;
+    height: 13px;
+  }
+}
 
 /*# sourceMappingURL=RatingStars.css.map */
