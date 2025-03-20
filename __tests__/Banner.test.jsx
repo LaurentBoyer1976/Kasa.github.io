@@ -1,7 +1,8 @@
+/* eslint-env jest */
 import React from 'react';
 import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import Banner from '../src/Js/Components/Banner.jsx';
-import { describe, it, expect } from 'jest';
 
 describe('Banner', () => {
     it('renders children when passed in', () => {
@@ -17,6 +18,9 @@ describe('Banner', () => {
         const { getByAltText } = render(
             <Banner assets="test-banner.jpg" />
         );
-        expect(getByAltText('banner')).toBeInTheDocument();
+        const imgElement = getByAltText('Default banner');
+        expect(imgElement).toBeInTheDocument();
+        expect(imgElement).toHaveAttribute('src', 'test-banner.jpg');
+        expect(imgElement).toHaveClass('banner__container--img');
     });
 });

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import logo from "../../assets/Kasa_LOGO.svg";
 import "../../Css/Components/NavBar.css";

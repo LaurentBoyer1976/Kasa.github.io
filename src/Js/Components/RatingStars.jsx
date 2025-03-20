@@ -9,6 +9,7 @@ const PinkStars = () => {
             icon={faStar} 
             className="rating__container--Stars-Pink"
             aria-hidden='false'
+            data-testid="pink-star" // Ajout de l'attribut data-testid
         />
     );
 }
@@ -19,6 +20,7 @@ const GreyStars = () => {
             icon={faStar} 
             className="rating__container--Stars-Grey"
              aria-hidden='false'
+            data-testid="grey-star" // Ajout de l'attribut data-testid
         />
     );
 }

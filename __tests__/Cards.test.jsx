@@ -7,6 +7,11 @@ import logements from '../Datas/logements.json'; // Correction du chemin
 import { describe, it, expect } from '@jest/globals';
 import PropTypes from 'prop-types';
 
+jest.mock('../Datas/logements.json', () => [
+    { id: '1', title: 'Logement 1', description: 'Description 1', host: { name: 'Host 1', picture: 'host1.jpg' }, rating: '5', location: 'Paris', equipments: [], tags: [] },
+    { id: '2', title: 'Logement 2', description: 'Description 2', host: { name: 'Host 2', picture: 'host2.jpg' }, rating: '4', location: 'Lyon', equipments: [], tags: [] },
+]);
+
 describe('Cards', () => {
     it('renders all cards', () => {
         const { getAllByRole } = render(

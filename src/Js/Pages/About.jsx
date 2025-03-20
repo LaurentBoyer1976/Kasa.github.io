@@ -1,7 +1,7 @@
 import React from 'react';
 import contents from '../../../Datas/about.json';
 import Banner from '../Components/Banner.jsx';
-import aboutBannerImg from '../../assets/IMG/BannerPicture2.png';
+import aboutBannerImg from '../../assets/IMG/BannerPicture2.png'; // Mocked in Jest configuration
 import CollapseBtn from '../Components/CollapseBtn.jsx';
 import '../../Css/Pages/About.css';
 

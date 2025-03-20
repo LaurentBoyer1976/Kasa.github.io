@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const EquipmentsList = ({ equipments }) => {
     const equipmentItems = equipments.map((equipment, index) => (
         <li className="equipments__list--item" key={equipment+index}>{equipment}</li>

@@ -23,7 +23,7 @@ const RightArrow = () => {
 
 const SlidingPicture = ({ logement }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const gallery = logement.pictures;
+    const gallery = logement.pictures || []; // Ajoutez une valeur par défaut
     const totalPictures = gallery.length;
 
     const handleNext = () => {
@@ -38,7 +38,13 @@ const SlidingPicture = ({ logement }) => {
         <div type='slideshow' className='slidingPicture'>
             <div className='slidingPicture__container'>
                 {totalPictures > 1 && (
-                    <span className='slidingPicture__container--previous' onClick={handlePrevious}><LeftArrow /></span>
+                    <span
+                        className='slidingPicture__container--previous'
+                        onClick={handlePrevious}
+                        aria-label="previous"
+                    >
+                        <LeftArrow />
+                    </span>
                 )}
                 {gallery.map((picture, index) => (
                     <img
@@ -49,7 +55,13 @@ const SlidingPicture = ({ logement }) => {
                     />
                 ))}
                 {totalPictures > 1 && (
-                    <span className='slidingPicture__container--next' onClick={handleNext}><RightArrow /></span>
+                    <span
+                        className='slidingPicture__container--next'
+                        onClick={handleNext}
+                        aria-label="next"
+                    >
+                        <RightArrow />
+                    </span>
                 )}
             </div>
             {totalPictures > 1 && (

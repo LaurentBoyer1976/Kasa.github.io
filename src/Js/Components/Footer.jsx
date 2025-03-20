@@ -1,4 +1,4 @@
-//import './Footer.css';
+import React from 'react';
 import footerLogo from "../../assets/footerLogo.svg";
 import "../../Css/Components/Footer.css"
 
