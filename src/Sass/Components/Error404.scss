@@ -16,8 +16,9 @@
 // Info : media queries
 @media screen and (max-width: 1023px) and (min-width: 320px){
     .error__container{
+        padding: 9.5% 9.5% 20% 9.5% !important;
         &--title{
-           font-size: 96px;
+           font-size: 96px;           
         }
         &--message{
             font-size: vm.$FontSize18;
