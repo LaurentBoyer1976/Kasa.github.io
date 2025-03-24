@@ -5,6 +5,9 @@
   overflow: scroll;
   max-height: 860px;
   flex-flow: row wrap;
+  background-color: #f6f6f6;
+  padding: 2.5% 2%;
+  border-radius: 25px;
 }
 
 .cardLink {
@@ -59,6 +62,7 @@
   .cards__container {
     overflow-y: auto;
     scroll-behavior: smooth;
+    background-color: unset;
     -ms-overflow-style: none;
   }
   .cards__container::-webkit-scrollbar {

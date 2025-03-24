@@ -224,12 +224,15 @@ $cursorPointer: pointer;
     border-radius: $borderRadius;
 }
 //Note : Mixins pour les cartes
-@mixin cardsContainer($display: $displayFlex, $justify: $flexSpaceBetween, $overflow: scroll, $maxHeight: 860px, $flexFlow: $flexRowWrap) {
+@mixin cardsContainer($backgroundC: $bckColorArticle,$padding:2.5% 2%, $borderRadius: $borderRadius25, $display: $displayFlex, $justify: $flexSpaceBetween, $overflow: scroll, $maxHeight: 860px, $flexFlow: $flexRowWrap) {
     display: $display;
     justify-content: $justify;
     overflow: $overflow;
     max-height: $maxHeight;
     flex-flow: $flexFlow;
+    background-color: $backgroundC;
+    padding:$padding;
+    border-radius: $borderRadius;
 }
 @mixin cardLink($textDecoration: none, $position: $relative, $display: $displayFlex, $overflow: hidden, $width: 340px, $height: 340px, $borderRadius: $borderRadius10, $aspectRatio: 1/1, $boxShadow: $boxShadow, $marginTop: 2%, $marginBottom: 2%) {
     text-decoration: $textDecoration;
